@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="manureSpreader" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="7" filename="../scripts/emissiveBillboardShader.xml" relativePath="true"/>
+    <File fileId="6" filename="../textures/car_corona_red_diffuse.png" relativePath="true"/>
+    <File fileId="4" filename="../textures/manure_diffuse.png" relativePath="true"/>
+    <File fileId="5" filename="../textures/trailers/manureSpreaderAlpha_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="../textures/trailers/manureSpreaderWheel_diffuse.png" relativePath="true"/>
+    <File fileId="3" filename="../textures/trailers/manureSpreader_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="manureSpreader_mat" materialId="9" ambientColor="1 1 1">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="manureSpreaderAlpha_mat" materialId="10" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="manure_mat" materialId="12" ambientColor="1 1 1">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="coronaMat_back" materialId="14" ambientColor="1 1 1" alphaBlending="true" customShaderId="7">
+      <Emissivemap fileId="6"/>
+    </Material>
+    <Material name="manureSpreaderLights_mat" materialId="118" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+      <Emissivemap fileId="3"/>
+    </Material>
+    <Material name="lambert1" materialId="7" diffuseColor="0.498039 0.498039 0.498039 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="manureSpreaderWheel_mat" materialId="8" ambientColor="1 1 1">
+      <Texture fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="manureSpreader.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="manureSpreader" dynamic="true" compound="true" collisionMask="8397058" density="0.06" clipDistance="300" nodeId="180" materialIds="7" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <Shape name="wheel01" translation="1.09221 0.736 -0.9775" nodeId="181" materialIds="8" shapeId="2" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheel02" translation="-1.09221 0.736 -0.9775" nodeId="182" materialIds="8" shapeId="3" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheel03" translation="1.09221 0.736 -2.53" nodeId="183" materialIds="8" shapeId="4" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheel04" translation="-1.09221 0.736 -2.53" nodeId="184" materialIds="8" shapeId="5" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="attacherJoint" translation="-0.00247596 1.22227 4.31857" rotation="0 90 0" visibility="false" nodeId="185"/>
+      <TransformGroup name="manureSpreader|lights" visibility="false" nodeId="186">
+        <Shape name="manureSpreader|lights|lights" translation="-0.0601546 1.83923 0.107555" nodeId="187" materialIds="118" shapeId="6" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <Shape name="support" translation="0.404276 0.476477 2.6949" nodeId="188" materialIds="9" shapeId="7" castsShadows="true" receiveShadows="true">
+        <TransformGroup name="supportJoint" translation="0 -0.149037 -5.68434e-016" nodeId="189"/>
+      </Shape>
+      <Shape name="fillPlane1" translation="0 3.3 0" nodeId="190" materialIds="12" shapeId="8" castsShadows="true" receiveShadows="true"/>
+      <Shape name="fillPlane2" translation="1.11022e-018 3.3 1.42109e-016" nodeId="191" materialIds="12" shapeId="9" castsShadows="true" receiveShadows="true"/>
+      <Shape name="manureSpreader_vis" translation="-0.0601546 1.83923 0.107555" nodeId="192" materialIds="9" shapeId="10" castsShadows="true" receiveShadows="true">
+        <TransformGroup name="rolls" translation="0.0601546 -1.83923 -0.107555" nodeId="193">
+          <Shape name="roll01" translation="-0.897 2.5648 -3.70533" nodeId="194" materialIds="9" shapeId="11" castsShadows="true" receiveShadows="true">
+            <Shape name="roll01|alpha" translation="0 0.127721 -0.0111742" nodeId="195" materialIds="10" shapeId="12" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape name="roll02" translation="-0.299 2.5648 -3.70533" nodeId="196" materialIds="9" shapeId="13" castsShadows="true" receiveShadows="true">
+            <Shape name="roll02|alpha" translation="-7.10543e-017 0.127721 -0.0111742" nodeId="197" materialIds="10" shapeId="14" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape name="roll03" translation="0.299 2.5648 -3.70533" nodeId="198" materialIds="9" shapeId="15" castsShadows="true" receiveShadows="true">
+            <Shape name="roll03|alpha" translation="0 0.127721 -0.0111742" nodeId="199" materialIds="10" shapeId="16" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape name="roll04" translation="0.897 2.5648 -3.70533" rotation="0 539.739 0" nodeId="200" materialIds="9" shapeId="17" castsShadows="true" receiveShadows="true">
+            <Shape name="roll04|alpha" translation="1.44717e-015 0.127721 -0.0111742" nodeId="201" materialIds="10" shapeId="18" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+        </TransformGroup>
+        <Shape name="door" translation="0.0601546 1.77089 -3.85105" nodeId="202" materialIds="9" shapeId="19" castsShadows="true" receiveShadows="true">
+          <TransformGroup name="doorCylinderRef" translation="-7.62939e-009 -0.702977 -0.238153" rotation="9.54166e-015 0 0" nodeId="203"/>
+        </Shape>
+        <Shape name="hydraulics" translation="0.0601546 1.53919 -3.86944" rotation="-65 0 0" nodeId="204" materialIds="9" shapeId="20" castsShadows="true" receiveShadows="true">
+          <Shape name="cylinder" translation="0 9.9476e-016 5.68434e-016" nodeId="205" materialIds="9" shapeId="21" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+      </Shape>
+      <TransformGroup name="sprayAreaStart" translation="-5 0 -4.2991" nodeId="206"/>
+      <TransformGroup name="sprayAreaWidth" translation="5 0 -4.2991" nodeId="207"/>
+      <TransformGroup name="sprayAreaHeight" translation="-5 0 -5.24965" nodeId="208"/>
+      <TransformGroup name="sprayValve" translation="0 2.63732 -3.68673" rotation="84.6763 0 0" nodeId="209"/>
+      <TransformGroup name="lightCoronas" nodeId="210">
+        <Shape name="coronaBackRight" translation="-1.236 0.773 -4.29755" rotation="0 180 0" nodeId="211" materialIds="14" shapeId="22"/>
+        <Shape name="coronaBackLeft" translation="1.23646 0.772604 -4.29791" rotation="0 180 0" nodeId="212" materialIds="14" shapeId="22"/>
+      </TransformGroup>
+      <Shape name="topCol3" translation="-0.044664 2.60059 -3.54006" visibility="false" compoundChild="true" collisionMask="8450" density="0.1" nodeId="213" materialIds="7" shapeId="24" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="topCol2" translation="-1.18588 2.60059 -0.687815" rotation="0 90 0" visibility="false" compoundChild="true" collisionMask="8450" density="0.1" nodeId="214" materialIds="7" shapeId="25" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="topCol1" translation="1.29706 2.60059 -0.687815" rotation="0 90 0" visibility="false" compoundChild="true" collisionMask="8450" density="0.1" nodeId="215" materialIds="7" shapeId="25" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="topCol" translation="-0.044664 2.60059 2.45249" visibility="false" compoundChild="true" collisionMask="8450" density="0.1" nodeId="216" materialIds="7" shapeId="27" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelRearLeftCol" translation="1.08844 0.914337 -1.75279" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.001" nodeId="217" materialIds="7" shapeId="28" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelRearRightCol" translation="-1.088 0.91382 -1.75073" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.001" nodeId="218" materialIds="7" shapeId="29" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+    <Shape name="supportWheelCollision" translation="0.404597 0.333628 2.69516" visibility="false" dynamic="true" collisionMask="8450" nodeId="219" materialIds="7" shapeId="30" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="181">
+      <Attribute name="MaxHandle" type="integer" value="21"/>
+    </UserAttribute>
+    <UserAttribute nodeId="182">
+      <Attribute name="MaxHandle" type="integer" value="21"/>
+    </UserAttribute>
+    <UserAttribute nodeId="183">
+      <Attribute name="MaxHandle" type="integer" value="18"/>
+    </UserAttribute>
+    <UserAttribute nodeId="184">
+      <Attribute name="MaxHandle" type="integer" value="18"/>
+    </UserAttribute>
+    <UserAttribute nodeId="187">
+      <Attribute name="MaxHandle" type="integer" value="19"/>
+    </UserAttribute>
+    <UserAttribute nodeId="188">
+      <Attribute name="MaxHandle" type="integer" value="19"/>
+    </UserAttribute>
+    <UserAttribute nodeId="192">
+      <Attribute name="MaxHandle" type="integer" value="19"/>
+    </UserAttribute>
+    <UserAttribute nodeId="194">
+      <Attribute name="MaxHandle" type="integer" value="19"/>
+    </UserAttribute>
+    <UserAttribute nodeId="196">
+      <Attribute name="MaxHandle" type="integer" value="19"/>
+    </UserAttribute>
+    <UserAttribute nodeId="198">
+      <Attribute name="MaxHandle" type="integer" value="19"/>
+    </UserAttribute>
+    <UserAttribute nodeId="200">
+      <Attribute name="MaxHandle" type="integer" value="19"/>
+    </UserAttribute>
+    <UserAttribute nodeId="202">
+      <Attribute name="MaxHandle" type="integer" value="19"/>
+    </UserAttribute>
+    <UserAttribute nodeId="204">
+      <Attribute name="MaxHandle" type="integer" value="19"/>
+    </UserAttribute>
+    <UserAttribute nodeId="205">
+      <Attribute name="MaxHandle" type="integer" value="19"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

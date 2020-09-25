@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="lizard58Cutter" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="../textures/cutters/lizard58Cutter_diffuse.png" relativePath="true"/>
+    <File fileId="3" filename="../textures/cutters/lizard58Cutter_normal.png" relativePath="true"/>
+    <File fileId="4" filename="../textures/cutters/lizard58Cutter_specular.png" relativePath="true"/>
+    <File fileId="5" filename="../textures/steerable/lizard58Decals_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="7" diffuseColor="0.498039 0.498039 0.498039 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="lizard58Decals_mat" materialId="9" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5" alphaBlending="true">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="blinn10" materialId="10" diffuseColor="0.498039 0.498039 0.498039 1" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+    </Material>
+    <Material name="lizard58Cutter_mat" materialId="8" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="lizard58Cutter.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="lizard58Cutter" dynamic="true" collisionMask="67121154" density="0.08" clipDistance="300" nodeId="38" materialIds="10" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <Shape name="armCutterMount" translation="0.000663986 0.796643 0.135184" nodeId="39" materialIds="8" shapeId="2" castsShadows="true" receiveShadows="true">
+        <Shape name="cutter" translation="0.0284154 -0.544051 -1.23853" nodeId="40" materialIds="8" shapeId="3" castsShadows="true" receiveShadows="true">
+          <TransformGroup name="cutterSpikes" translation="-0.0290794 -0.252593 1.10334" nodeId="41">
+            <Shape name="spike01" translation="-2.25526 0.760994 -1.35442" nodeId="42" materialIds="9" shapeId="4" castsShadows="true" receiveShadows="true"/>
+            <Shape name="spike02" translation="-2.25526 0.289835 -1.66865" nodeId="43" materialIds="9" shapeId="5" castsShadows="true" receiveShadows="true"/>
+            <Shape name="spike03" translation="-2.25526 -0.216942 -1.41778" nodeId="44" materialIds="9" shapeId="6" castsShadows="true" receiveShadows="true"/>
+            <Shape name="spike04" translation="-2.25526 -0.255603 -0.852802" nodeId="45" materialIds="9" shapeId="7" castsShadows="true" receiveShadows="true"/>
+            <Shape name="spike05" translation="-2.25526 0.72314 -0.787637" nodeId="46" materialIds="9" shapeId="8" castsShadows="true" receiveShadows="true"/>
+            <Shape name="spike06" translation="-2.25526 0.21411 -0.538764" nodeId="47" materialIds="9" shapeId="9" castsShadows="true" receiveShadows="true"/>
+          </TransformGroup>
+          <Shape name="spikes" translation="-0.0290794 -0.252593 1.10334" nodeId="48" materialIds="9" shapeId="10" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+      </Shape>
+      <Shape name="roll" translation="0.0609142 0.120492 -0.133968" nodeId="49" materialIds="8" shapeId="11" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="areaStart" translation="-2.2917 0.0117361 -0.187954" nodeId="50"/>
+      <TransformGroup name="areaWidth" translation="2.41778 -4.42812e-017 7.09162e-016" nodeId="51"/>
+      <TransformGroup name="areaHeight" translation="-2.292 0.0752391 -0.939109" nodeId="52"/>
+      <TransformGroup name="attacherJoint" translation="-3.79868e-017 0.462508 0.296077" rotation="0 90 0" nodeId="53"/>
+      <TransformGroup name="aiLeftMarker" translation="-2.23492 0.0542809 -0.869307" nodeId="54"/>
+      <TransformGroup name="aiRightMarker" translation="2.37738 0.0542809 -0.869307" nodeId="55"/>
+      <Shape name="vehicleCollisionTrigger" rotation="0 180 0" visibility="false" kinematic="true" trigger="true" collisionMask="1056768" nodeId="56" materialIds="7" shapeId="12" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="lizard58Cutter_vis" translation="0 0.263894 -0.442284" nodeId="57" materialIds="8" shapeId="13" castsShadows="true" receiveShadows="true"/>
+    </Shape>
+  </Scene>
+
+</i3D>

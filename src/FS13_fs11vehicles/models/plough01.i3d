@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="plough01" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="../textures/tools/plough01_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="7" diffuseColor="0.498039 0.498039 0.498039 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="plough_diffuse" materialId="8" ambientColor="1 1 1" cosPower="10" specularColor="0.35538 0.35538 0.35538">
+      <Texture fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="plough01.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="plough01" dynamic="true" collisionMask="8194" density="0.12" clipDistance="200" nodeId="16" materialIds="7" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <TransformGroup name="attacherJoint" translation="-3.40059e-017 0.43906 2.21307" rotation="0 90 0" nodeId="17"/>
+      <TransformGroup name="topReferencePoint" translation="0 1.41471 2.27819" nodeId="18"/>
+      <Shape name="plough_vis" nodeId="19" materialIds="8" shapeId="2" castsShadows="true" receiveShadows="true">
+        <Shape name="plough_rot" translation="0.000177107 0.710007 2.15777" nodeId="20" materialIds="8" shapeId="3" castsShadows="true" receiveShadows="true">
+          <TransformGroup name="startIndex1" translation="0.0687715 0.00372388 -0.22671" nodeId="21"/>
+          <TransformGroup name="widthIndex1" translation="-0.479451 0.00372388 -0.963903" nodeId="22"/>
+          <TransformGroup name="heightIndex1" translation="0.872199 0.00372388 -3.52065" nodeId="23"/>
+          <TransformGroup name="aiLeftMarker" translation="0.928205 0 -0.404164" nodeId="24"/>
+          <TransformGroup name="aiRightMarker" translation="-0.233992 1.42109e-016 -0.404" nodeId="25"/>
+          <TransformGroup name="aiBackMarker" translation="-0.000177107 0 -2.57039" nodeId="26"/>
+        </Shape>
+      </Shape>
+    </Shape>
+  </Scene>
+
+</i3D>

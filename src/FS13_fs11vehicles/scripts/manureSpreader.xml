@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="manureSpreader">
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <typeDesc>$l10n_TypeDesc_ManureSpreader</typeDesc>
+    <filename>models/manureSpreader.i3d</filename>
+
+    <size width="3.5" length="8.0" />
+
+    <wheels autoRotateBackSpeed="2.0">
+        <wheel driveMode="0" repr="0" radius="0.739" deltaY="0.25" suspTravel="0.25" spring="5" damper="20" mass="0.4" lateralStiffness="5" />
+        <wheel driveMode="0" repr="1" radius="0.739" deltaY="0.25" suspTravel="0.25" spring="5" damper="20" mass="0.4" lateralStiffness="5" />
+        <wheel driveMode="0" repr="2" radius="0.739" deltaY="0.25" suspTravel="0.25" spring="5" damper="20" mass="0.4" steeringAxleScale="-0.7" steeringAxleRotMax="20" steeringAxleRotMin="-20" lateralStiffness="5" />
+        <wheel driveMode="0" repr="3" radius="0.739" deltaY="0.25" suspTravel="0.25" spring="5" damper="20" mass="0.4" steeringAxleScale="-0.7" steeringAxleRotMax="20" steeringAxleRotMin="-20" lateralStiffness="5" />
+    </wheels>
+    <brakeForce>2</brakeForce>
+	<steeringAxleAngleScale startSpeed="5" endSpeed="70" />
+    <lights count="1">
+        <light1 index="5" />
+    </lights>
+	<lightCoronas>
+		<lightCorona index="14" />
+	</lightCoronas>	  	
+
+    <cuttingAreas count="1">
+        <cuttingArea1 startIndex="10" widthIndex="11" heightIndex="12"/>
+    </cuttingAreas>
+
+	<massScale value="1" />
+    <capacity>12000</capacity>
+    <startFillLevel>0</startFillLevel>
+
+
+    <sprayParticleSystem file="$data/vehicles/particleSystems/manureSprayParticleSystem.i3d" />
+
+    <spraySound file="$data/vehicles/trailers/manureSpreader.wav" pitchOffset="1" volume="1"/>
+
+    <sprayValves>
+        <sprayValve index="13" />
+    </sprayValves>
+
+    <rotatingParts>
+        <rotatingPart node="9|0|0" speed="-0.007" />
+        <rotatingPart node="9|0|1" speed="0.007" />
+        <rotatingPart node="9|0|2" speed="-0.007" />
+        <rotatingPart node="9|0|3" speed="0.007" />
+    </rotatingParts>
+
+    <fillSound file="$data/maps/sounds/siloFillSound.wav" pitchOffset="1.0" volume="1.5" />
+
+    <attacherJoint index="4" jointType="trailer"/>
+
+    <fillPlanes>
+        <fillPlane type="manure">
+            <node index="7">
+                <key time="0" translation="0 1.7 0" scale="1 0.4 1"/>
+                <key time="0.5" translation="0 2.4 0" scale="1 0.85 1"/>
+                <key time="1" translation="0 3.3 0" scale="1 1 1"/>
+            </node>
+            <node index="8">
+                <key time="0" translation="0 1.7 0" scale="1 0.05 1"/>
+                <key time="0.5" translation="0 2.4 0" scale="1 0.390 1"/>
+                <key time="1" translation="0 3.3 0" scale="1 1 1"/>
+            </node>
+        </fillPlane>
+    </fillPlanes>
+
+
+    <sprayUsages>
+        <sprayUsage fillType="manure" litersPerSecond="100" />
+    </sprayUsages>
+
+    <fillTypes fillTypes="manure" />
+
+    <doorAnimation name="openDoor" openSpeedScale="1" closeSpeedScale="-0.6" />
+
+    <support animationName="moveSupport" />
+
+    <animations>
+        <animation name="openDoor">
+            <part node="0>9|1" startTime="0" endTime="0.5" startRot="0 0 0 " endRot="80 0 0"/>
+            <part node="0>9|1" startTime="0.5" endTime="0.57" startRot="80 0 0" endRot="90 0 0"/>
+        </animation>
+
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="6" startTime="0" duration="0.5" startTrans="0.404 1.159 2.695" endTrans="0.404 0.476 2.695" />
+        </animation>
+    </animations>
+
+    <movingTools>
+        <!-- door -->
+        <movingTool index="0>9|1">
+            <!-- door cylinder -->
+            <dependentPart index="0>9|2" />
+        </movingTool>
+
+        <!-- support -->
+        <movingTool index="0>6" componentJointIndex="0" anchorActor="0">
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- door cylinder -->
+        <movingPart index="0>9|2" referencePoint="0>9|1|0" referenceFrame="0>" invertZ="true">
+            <translatingPart index="0>9|2|0" />
+        </movingPart>
+    </movingParts>
+
+    <components count="2">
+        <component1 centerOfMass="0 0 -2" solverIterationCount="4" />
+        <component2 solverIterationCount="8" />
+        <joint component1="0" component2="1" index="0>6|0" rotLimit="0 0 0" transLimit="0 0 0" />
+    </components>
+	
+    <schemaOverlay file="$data/vehicles/schemas/implementSchema.png" fileSelected="$data/vehicles/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+	
+</vehicle>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="forageWagon">
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <en>Poettinger Euroboss 330 T</en>
+        <de>Pöttinger Euroboss 330 T</de>
+    </name>
+    <typeDesc>$l10n_TypeDesc_ForageWagon</typeDesc>
+    <filename>models/euroboss330t.i3d</filename>
+
+    <size width="3.0" length="9.0" />
+
+    <wheels autoRotateBackSpeed="2.0">
+        <wheel driveMode="0" repr="0" radius="0.438" deltaY="0.13" suspTravel="0.15" spring="5" damper="20" mass="0.8" />
+        <wheel driveMode="0" repr="1" radius="0.438" deltaY="0.13" suspTravel="0.15" spring="5" damper="20" mass="0.8" />
+        <wheel driveMode="0" repr="2" radius="0.438" deltaY="0.13" suspTravel="0.15" spring="5" damper="20" mass="0.8" />
+        <wheel driveMode="0" repr="3" radius="0.438" deltaY="0.13" suspTravel="0.15" spring="5" damper="20" mass="0.8" />
+    </wheels>
+
+    <brakeForce>2</brakeForce>
+	<downForce>10</downForce>
+
+    <lights count="1">
+        <light1 index="6|0|0" />
+    </lights>
+	<lightCoronas>
+		<lightCorona index="6|0|1" />
+	</lightCoronas>	    
+    <fillPlanes>
+    <fillPlanes>
+        <fillPlane type="chaff">
+            <node index="21">
+                <key time="0" y="0.83" scale="0.780 0.01 1"/>
+                <key time="0.05" y="0.912" scale="0.82 0.01 1"/>
+                <key time="0.5" y="1.150" scale="0.92 0.5 1"/>
+                <key time="1" y="1.477" scale="1 1 1"/>
+            </node>
+        </fillPlane>
+		<fillPlane type="grass_windrow">
+            <node index="7">
+                <key time="0" y="0.83" scale="0.780 0.01 1"/>
+                <key time="0.05" y="0.912" scale="0.82 0.01 1"/>
+                <key time="0.5" y="1.150" scale="0.92 0.5 1"/>
+                <key time="1" y="1.477" scale="1 1 1"/>
+            </node>
+        </fillPlane>
+    </fillPlanes>
+    </fillPlanes>
+
+    <capacity>15000</capacity>
+    <startFillLevel>0</startFillLevel>
+    <cuttingAreas count="1">
+        <cuttingArea1 startIndex="8" widthIndex="9" heightIndex="10" />
+    </cuttingAreas>
+
+    <attacherJoint index="4" jointType="trailerLow"/>
+    <tipReferencePoint index="5" />
+    <tipAnimation rootNode="6|0" speedScale="1" clip="ejectMechanism1Source" />
+
+    <forageWgnSound file="$data/vehicles/trailers/forageWagon.wav" pitchOffset="1" volume="1.0" />
+    <hydraulicSound file="$data/vehicles/steerable/deutz/hydraulicUp.wav" pitchOffset="1.0" volume="1.0" />
+    <fillSound file="$data/maps/sounds/siloFillSound.wav" pitchOffset="1.0" volume="1.5" />
+
+    <dischargeParticleSystems>
+				<dischargeParticleSystem type="chaff" node="21" rotation="0 0 0" position="0 0 0" file="$data/vehicles/particleSystems/trailerDPSBigChaff.i3d" />
+				<dischargeParticleSystem type="grass_windrow" node="21" rotation="0 0 0" position="0 0 0" file="$data/vehicles/particleSystems/trailerDPSBigGrass.i3d" />
+    </dischargeParticleSystems>
+
+    <fillTypes fruitTypes="grass_windrow chaff" />
+
+    <fillScale value="1" />
+    <massScale value="0.5" />
+    <tipDischargeEndTime value="10000" />
+	
+    <movingTools>
+        <!-- support -->
+        <movingTool index="0>13" componentJointIndex="0" anchorActor="0"></movingTool>
+    </movingTools>
+	
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="13" startTime="0" duration="0.6" startTrans="0 0.5 3.479" endTrans="0 0 3.479" />
+        </animation>		
+    </animations>
+	
+    <support animationName="moveSupport" />	
+	
+    <components count="2">
+        <component1 centerOfMass="0 0 -0.85" solverIterationCount="4" />
+        <component2 solverIterationCount="8" />
+        <joint component1="0" component2="1" index="0>13|0" rotLimit="0 0 0" transLimit="0 0 0" />
+    </components>
+	
+    <schemaOverlay file="$data/vehicles/schemas/implementSchema.png" fileSelected="$data/vehicles/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+	
+</vehicle>

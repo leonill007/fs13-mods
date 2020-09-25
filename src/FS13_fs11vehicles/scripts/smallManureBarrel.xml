@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="sprayer_animated">
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <typeDesc>$l10n_TypeDesc_ManureBarrel</typeDesc>
+    <filename>models/smallManureBarrel.i3d</filename>
+
+    <size width="3.5" length="8.0" />
+
+    <wheels autoRotateBackSpeed="2.0">
+        <wheel driveMode="0" repr="0" radius="0.765" deltaY="0.12" suspTravel="0.15" spring="5" damper="20" mass="0.4" />
+        <wheel driveMode="0" repr="1" radius="0.765" deltaY="0.12" suspTravel="0.15" spring="5" damper="20" mass="0.4" />
+    </wheels>
+    <brakeForce>2</brakeForce>
+	<downForce>2</downForce>
+    <lights count="1">
+        <light1 index="3" />
+    </lights>
+	<lightCoronas>
+		<lightCorona index="9" />
+	</lightCoronas>	  	
+
+    <cuttingAreas count="1">
+        <cuttingArea1 startIndex="5" widthIndex="6" heightIndex="7"/>
+    </cuttingAreas>
+
+	<massScale value="1" />
+    <capacity>8000</capacity>
+    <startFillLevel>0</startFillLevel>
+
+    <allowFillFromAir value="false"/>
+
+    <sprayParticleSystem file="$data/vehicles/particleSystems/liquidManureSprayParticleSystem.i3d" />
+
+    <spraySound file="$data/vehicles/trailers/manureBarrel.wav" pitchOffset="1" volume="1"/>
+
+    <sprayValves>
+        <sprayValve index="8" />
+    </sprayValves>
+
+    <fillSound file="$data/maps/sounds/siloFillSound.wav" pitchOffset="1.0" volume="1.5" />
+
+    <movingTools>
+        <!-- support -->
+        <movingTool index="0>4" componentJointIndex="0" anchorActor="0">
+        </movingTool>
+    </movingTools>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="4" startTime="0" duration="0.5" startTrans="0.547 0.76 3.561" endTrans="0.547 0.312 3.561" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <attacherJoint index="2" jointType="trailer"/>
+
+    <sprayUsages>
+        <sprayUsage fillType="liquidManure" litersPerSecond="75" />
+    </sprayUsages>
+
+    <fillTypes fruitTypes="liquidManure" />
+
+    <components count="2">
+        <component1 centerOfMass="0 0.05 0.1" solverIterationCount="8" />
+        <component2 solverIterationCount="8" />
+        <joint component1="0" component2="1" index="0>4|0" rotLimit="0 0 0" transLimit="0 0 0" />
+    </components>
+	
+    <schemaOverlay file="$data/vehicles/schemas/implementSchema.png" fileSelected="$data/vehicles/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+	
+</vehicle>

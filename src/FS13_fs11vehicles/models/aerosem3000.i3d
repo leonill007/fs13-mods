@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="aerosem3000" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="../textures/tools/aerosem3000_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="aerosem3000_diffuse" materialId="8" ambientColor="1 1 1" cosPower="10" specularColor="0.1405 0.1405 0.1405">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="lambert1" materialId="7" diffuseColor="0.498039 0.498039 0.498039 1" ambientColor="1 1 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="aerosem3000.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="aerosem3000" dynamic="true" compound="true" collisionMask="8397058" density="0.05" clipDistance="200" nodeId="18" materialIds="7" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <TransformGroup name="startIndex" translation="1.90458 0 -0.0839177" nodeId="19"/>
+      <TransformGroup name="widthIndex" translation="-1.90422 0 -0.0839177" nodeId="20"/>
+      <TransformGroup name="heightIndex" translation="1.53535 0 -1.15392" nodeId="21"/>
+      <TransformGroup name="attacherJoint" translation="-1.42109e-016 0.486719 1.73448" rotation="0 90 0" nodeId="22"/>
+      <TransformGroup name="topReferencePoint" translation="-8.17895e-017 1.20378 1.75117" nodeId="23"/>
+      <Shape name="aerosem3000_vis" nodeId="24" materialIds="8" shapeId="2" castsShadows="true" receiveShadows="true"/>
+      <Shape name="collbox" translation="0 1.69558 0.742981" visibility="false" compoundChild="true" collisionMask="8194" density="0.05" nodeId="25" materialIds="7" shapeId="3" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <TransformGroup name="aiLeftMarker" translation="1.905 0 -0.084" nodeId="26"/>
+      <TransformGroup name="aiRightMarker" translation="-1.904 0 -0.084" nodeId="27"/>
+      <TransformGroup name="aiBackMarker" translation="0 0 -1.154" nodeId="28"/>
+      <Shape name="aiCollisionTrigger" translation="7.76672e-005 1.32712 1.6566" kinematic="true" trigger="true" collisionMask="1056768" nodeId="29" materialIds="7" shapeId="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+  </Scene>
+
+</i3D>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cultivator">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <de>Pöttinger SYNKRO 4003 K</de>
+    </name>
+    <description></description>
+	<typeDesc>$l10n_TypeDesc_Cultivator</typeDesc>
+    <filename>models/synkro4003k.i3d</filename>
+
+    <size width="5.0" length="4.5" lengthOffset="2" />
+
+    <cuttingAreas count="3">
+        <cuttingArea1 startIndex="0" widthIndex="1" heightIndex="2" foldMinLimit="0" foldMaxLimit="1" />
+        <cuttingArea2 startIndex="7|1" widthIndex="7|2" heightIndex="7|3" foldMinLimit="0" foldMaxLimit="0.2" />
+        <cuttingArea3 startIndex="10|1" widthIndex="10|2" heightIndex="10|3" foldMinLimit="0" foldMaxLimit="0.2" />
+    </cuttingAreas>
+
+    <cultivatorSound file="$data/vehicles/tools/cultivatorSound.wav" pitchOffset="0.5" volume="0.6"/>
+
+    <attacherJoint index="3" jointType="implement" topReferenceNode="4"/>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="7|0" radius="0.45" foldMinLimit="0" foldMaxLimit="0.15"/>
+        <speedRotatingPart index="10|0" radius="0.45" foldMinLimit="0" foldMaxLimit="0.15"/>
+    </speedRotatingParts>
+    <foldingParts>
+        <foldingPart componentJointIndex="0" anchorActor="0" animationClip="foldRightClipSource" rootNode="7" speedScale="0.85" />
+        <foldingPart componentJointIndex="1" anchorActor="0" animationClip="foldLeftClipSource" rootNode="10" speedScale="0.85" />
+    </foldingParts>
+    <contactReportNodes>
+        <contactReportNode index="0>" />
+        <contactReportNode index="1>" />
+        <contactReportNode index="2>" />
+    </contactReportNodes>
+
+    <groundParticleSystem position="0 0 -0.5" rotation="0 0 0" file="$data/vehicles/particleSystems/fieldWorkParticleSystem.i3d" />
+
+    <aiLeftMarker index="12" />
+    <aiRightMarker index="13" />
+    <aiBackMarker index="14" />
+
+    <components count="3">
+        <component1 centerOfMass="0 0 -1.7" solverIterationCount="4" />
+        <component2 centerOfMass="1.4723 0 -1.775" solverIterationCount="4" />
+        <component3 centerOfMass="-1.4723 0 -1.775" solverIterationCount="4" />
+        <joint component1="0" component2="1" index="0>6" rotLimit="0 0 0" transLimit="0 0 0" />
+        <joint component1="0" component2="2" index="0>9" rotLimit="0 0 0" transLimit="0 0 0" />
+    </components>
+	
+    <schemaOverlay file="$data/vehicles/schemas/implementSchema.png" fileSelected="$data/vehicles/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+	
+</vehicle>

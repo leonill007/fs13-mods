@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="tractor">
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <en>Deutz F1 M414</en>
+    </name>
+    <filename>models/deutzF1m414.i3d</filename>
+    <wheels autoRotateBackSpeed="2.5">
+        <wheel rotSpeed="70" rotMax="32" rotMin="-32" driveMode="2" repr="0" driveNode="0|0" radius="0.38" deltaY="0.05" suspTravel="0.1" spring="100" damper="20" mass="0.13" />
+        <wheel rotSpeed="70" rotMax="32" rotMin="-32" driveMode="2" repr="1" driveNode="1|0" radius="0.38" deltaY="0.05" suspTravel="0.1" spring="100" damper="20" mass="0.13" />
+        <wheel rotSpeed="0" driveMode="1" repr="2" radius="0.558" deltaY="0.05" suspTravel="0.1" spring="100" damper="20" mass="0.2" />
+        <wheel rotSpeed="0" driveMode="1" repr="3" radius="0.558" deltaY="0.05" suspTravel="0.1" spring="100" damper="20" mass="0.2" />
+    </wheels>
+	
+    <motor minRpm="300" maxRpm="900 1600 2300 1215" maxTorques="0.7 1.1 -1 0.9" brakeForce="5" lowBrakeForceScale="0.5" lowBrakeForceSpeedLimit="1" forwardGearRatio="15.5" backwardGearRatio="10" differentialRatio="1.0" rpmFadeOutRange="5">
+		<torque rpm="2300" torque="1.6"/>
+		
+        <backwardTorque rpm="300" torque="2.8"/>
+		<backwardTorque rpm="500" torque="0.5"/>
+    </motor>
+    <accelerationSpeed maxAcceleration="0.2" deceleration="0.6" backwardDeceleration="0.7" />
+	
+    <fuelCapacity>28</fuelCapacity>
+    <fuelUsage>0.00025</fuelUsage>
+    <downForce>5</downForce>
+	
+    <cameras count="2">
+        <camera1 index="4|0|0" rotatable="true" rotateNode="4|0" limit="true" rotMinX="-1.4" rotMaxX="0" transMin="4" transMax="20" >
+			<raycastNode index="0>15"/>
+			<raycastNode index="0>16"/>
+		</camera1>
+        <camera2 index="4|1" rotatable="true" limit="false" rotMinX="0" rotMaxX="0" transMin="0" transMax="0" />
+    </cameras>
+    
+    <tipCamera index="4|2" />    
+    
+    <lights count="2">
+        <light1 index="5|0" />
+        <light2 index="5|1" />
+    </lights>
+	
+	<lightCones>
+		<lightCone index="13" />	
+	</lightCones>
+	
+	<lightCoronas>
+		<lightCorona index="14" />	
+	</lightCoronas>
+
+    <size width="3.5" length="5.5" lengthOffset="-0.4"/>    
+
+    <exitPoint index="7" />
+    <steering index="8|0" rotationSpeed="6"/>
+
+    <enterReferenceNode index="0>" />
+
+    <cuttingAreas count="0">
+        <!--cuttingArea1 startIndex="6" widthIndex="7" heightIndex="8" losing="true"/-->
+    </cuttingAreas>
+
+    <trailerAttacherJoints>
+        <trailerAttacherJoint index="10" maxRotLimit="10 80 80" />
+    </trailerAttacherJoints>
+	
+	<motorStartDuration>2500</motorStartDuration>
+    <attachSound file="$data/vehicles/steerable/deutz/attach.wav" pitchOffset="1" />
+    <motorStartSound file="sounds/deutzF1m414_start.wav" pitchOffset="0.8" volume="1" />
+    <motorSound file="sounds/deutzF1m414_idle.wav" pitchOffset="0.8" pitchScale="0.005" pitchMax="1.05" volume="1" />
+    <motorStopSound file="sounds/deutzF1m414_out.wav" pitchOffset="0.85" />
+    <aiMotorSound  file="sounds/deutzF1m414_idleAI.wav" pitchOffset="1" radius="30" innerRadius="15" volume="1.0" />
+
+    <exhaustParticleSystems count="1">
+        <exhaustParticleSystem1 node="12" file="$data/vehicles/particleSystems/exhaustParticleSystem.i3d" />
+    </exhaustParticleSystems>
+    
+    <characterNode index="9" cameraMinDistance="1.5" />
+    <aiTrafficCollisionTrigger index="11" />     
+    <components count="1">
+        <component1 centerOfMass="0 0 -0.15" solverIterationCount="10" />
+    </components>
+	
+	<schemaOverlay file="$data/vehicles/schemas/vehicleSchema.png" fileSelected="$data/vehicles/schemas/vehicleSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0.5 0">
+        <attacherJoint position="1 0" rotation="0" invertX="false" />
+        <attacherJoint position="0 0" rotation="0" invertX="true" />
+        <attacherJoint position="1 0" rotation="0" invertX="false" />
+        <attacherJoint position="1 0" rotation="0" invertX="false" />
+    </schemaOverlay>
+
+</vehicle>

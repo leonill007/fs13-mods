@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="dynamicMountAttacherTrailer">
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <en>Bale Trailer</en>
+        <de>Ballen Sammelwagen</de>
+    </name>
+    <filename>models/baleTrailer01.i3d</filename>
+    <size width="3.0" length="12.0" lengthOffset="2" />
+    <wheels autoRotateBackSpeed="2.0">
+        <wheel driveMode="0" repr="0>0" radius="0.548" deltaY="0.1" suspTravel="0.15" spring="10" damper="30" mass="0.4" />
+        <wheel driveMode="0" repr="0>1" radius="0.548" deltaY="0.1" suspTravel="0.15" spring="10" damper="30" mass="0.4" />
+        <wheel driveMode="0" repr="1>0" radius="0.548" deltaY="0.1" suspTravel="0.15" spring="10" damper="30" mass="0.4" />
+        <wheel driveMode="0" repr="1>1" radius="0.548" deltaY="0.1" suspTravel="0.15" spring="10" damper="30" mass="0.4" />
+    </wheels>
+    <brakeForce>2</brakeForce>
+	<downForce>5</downForce>
+    <lights count="1">
+        <light1 index="3" />
+    </lights>     
+	<lightCoronas>
+		<lightCorona index="4" />
+	</lightCoronas>		
+    <attacherJoint index="2>0" jointType="trailer" rootNode="2>"/>
+    <allowFillFromAir value="false" />
+    <allowTipDischarge value="false" />
+    <components count="3">
+        <component1 centerOfMass="0 0 -3" solverIterationCount="20" />
+        <component2 solverIterationCount="20" />
+        <component3 solverIterationCount="20" />
+        <joint component1="0" component2="1" index="0>2" rotLimit="120 0 0" transLimit="0 0 0" />
+        <joint component1="1" component2="2" index="1>2" rotLimit="-1 0 0" transLimit="0 0 0" />
+    </components>
+
+	<schemaOverlay file="$data/vehicles/schemas/implementSchema.png" fileSelected="$data/vehicles/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0">
+		<attacherJoint position="0.5 0" rotation="0" invertX="false" />
+	</schemaOverlay>
+</vehicle>

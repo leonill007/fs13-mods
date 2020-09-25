@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="triton200" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="../textures/tools/triton200_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="7" diffuseColor="0.498039 0.498039 0.498039 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="triton200_diffuse" materialId="8" ambientColor="1 1 1" cosPower="10" specularColor="0.2314 0.2314 0.2314">
+      <Texture fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="triton200.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="triton200" dynamic="true" compound="true" collisionMask="8397058" density="0.1" clipDistance="200" nodeId="16" materialIds="7" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <TransformGroup name="startIndex" translation="2.97384 0 -0.267515" nodeId="17"/>
+      <TransformGroup name="widthIndex" translation="-2.974 0 -0.268" nodeId="18"/>
+      <TransformGroup name="heightIndex" translation="2.974 0 -0.919459" nodeId="19"/>
+      <TransformGroup name="attacherJoint" translation="9.25616e-020 0.352736 0.430597" rotation="0 90 0" nodeId="20"/>
+      <TransformGroup name="topReferencePoint" translation="0 0.794732 0.386598" nodeId="21"/>
+      <Shape name="triton200_vis" nodeId="22" materialIds="8" shapeId="2" castsShadows="true" receiveShadows="true"/>
+      <Shape name="triton200_col" translation="0 0.752299 -0.551202" visibility="false" compoundChild="true" collisionMask="8194" density="0.2" nodeId="23" materialIds="7" shapeId="3" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <TransformGroup name="sprayValve1" translation="2.74006 0.352836 -0.548051" nodeId="24"/>
+      <TransformGroup name="sprayValve2" translation="2.05481 0.352836 -0.548051" nodeId="25"/>
+      <TransformGroup name="sprayValve3" translation="1.3692 0.352836 -0.548051" nodeId="26"/>
+      <TransformGroup name="sprayValve4" translation="0.684365 0.352836 -0.548051" nodeId="27"/>
+      <TransformGroup name="sprayValve5" translation="0.00017351 0.352836 -0.548051" nodeId="28"/>
+      <TransformGroup name="sprayValve6" translation="-0.684878 0.352836 -0.548051" nodeId="29"/>
+      <TransformGroup name="sprayValve7" translation="-1.36916 0.352836 -0.548051" nodeId="30"/>
+      <TransformGroup name="sprayValve8" translation="-2.05456 0.352836 -0.525024" nodeId="31"/>
+      <TransformGroup name="sprayValve9" translation="-2.74021 0.352836 -0.548051" nodeId="32"/>
+    </Shape>
+  </Scene>
+
+</i3D>

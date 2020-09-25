@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="triton500" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="../textures/tools/triton500_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="7" diffuseColor="0.498039 0.498039 0.498039 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="triton500_diffuse" materialId="8" ambientColor="1 1 1" cosPower="10" specularColor="0.2314 0.2314 0.2314">
+      <Texture fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="triton500.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="triton500" dynamic="true" compound="true" collisionMask="8397058" density="0.2" clipDistance="200" nodeId="40" materialIds="7" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <TransformGroup name="startIndex" translation="1.7 0 -0.267515" nodeId="41"/>
+      <TransformGroup name="widthIndex" translation="-1.58907 0 -0.268" nodeId="42"/>
+      <TransformGroup name="heightIndex" translation="1.702 0 -0.919459" nodeId="43"/>
+      <TransformGroup name="attacherJoint" translation="9.25616e-020 0.352736 0.430597" rotation="0 90 0" nodeId="44"/>
+      <TransformGroup name="topReferencePoint" translation="0 0.794732 0.386598" nodeId="45"/>
+      <Shape name="body" nodeId="46" materialIds="8" shapeId="2" castsShadows="true" receiveShadows="true"/>
+      <Shape name="rightArm" translation="-1.5188 0.477046 -0.58005" nodeId="47" materialIds="8" shapeId="3" castsShadows="true" receiveShadows="true">
+        <Shape name="rightArmMiddle" translation="-0.207471 0.148244 0.00105347" nodeId="48" materialIds="8" shapeId="4" castsShadows="true" receiveShadows="true">
+          <Shape name="rightArmHinge" translation="-2.9433 -0.0800085 -6.35147e-005" nodeId="49" materialIds="8" shapeId="5" castsShadows="true" receiveShadows="true">
+            <Shape name="rightArmEnd" translation="-0.110009 0 0" nodeId="50" materialIds="8" shapeId="6" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="sprayValve1" translation="-0.230748 -0.189847 0.020835" nodeId="51"/>
+              <TransformGroup name="sprayValve2" translation="-0.876391 -0.189847 0.020835" nodeId="52"/>
+              <TransformGroup name="sprayValve3" translation="-1.5217 -0.189847 0.020835" nodeId="53"/>
+              <TransformGroup name="sprayValve4" translation="-2.16672 -0.189847 0.020835" nodeId="54"/>
+              <TransformGroup name="sprayValve5" translation="-2.81174 -0.189847 0.020835" nodeId="55"/>
+              <TransformGroup name="startIndex" translation="0.0760953 -0.545281 0.311545" nodeId="56"/>
+              <TransformGroup name="widthIndex" translation="-3.19609 -0.545281 0.31106" nodeId="57"/>
+              <TransformGroup name="heightIndex" translation="0.0534848 -0.545281 -0.340399" nodeId="58"/>
+              <TransformGroup name="foldJointRight1" translation="0.000815454 -0.0830518 -0.000172004" nodeId="59"/>
+            </Shape>
+          </Shape>
+          <TransformGroup name="foldJointRight" translation="0.000630224 -0.148079 -0.000896492" nodeId="60"/>
+          <TransformGroup name="sprayValve1" translation="-0.170995 -0.269856 0.0207715" nodeId="61"/>
+          <TransformGroup name="sprayValve2" translation="-0.815275 -0.269856 0.0207715" nodeId="62"/>
+          <TransformGroup name="sprayValve3" translation="-1.46058 -0.269856 0.0207715" nodeId="63"/>
+          <TransformGroup name="sprayValve4" translation="-2.10583 -0.269856 0.0207715" nodeId="64"/>
+          <TransformGroup name="sprayValve5" translation="-2.75089 -0.269856 0.0207715" nodeId="65"/>
+          <TransformGroup name="startIndex" translation="0.129645 -0.62529 0.311481" nodeId="66"/>
+          <TransformGroup name="widthIndex" translation="-2.98441 -0.62529 0.310997" nodeId="67"/>
+          <TransformGroup name="heightIndex" translation="0.13 -0.62529 -0.340463" nodeId="68"/>
+        </Shape>
+      </Shape>
+      <Shape name="leftArm" translation="1.5188 0.649994 -0.580721" nodeId="69" materialIds="8" shapeId="7" castsShadows="true" receiveShadows="true">
+        <Shape name="leftArmMiddle" translation="0.318382 -0.0247045 0.00172401" nodeId="70" materialIds="8" shapeId="8" castsShadows="true" receiveShadows="true">
+          <Shape name="leftArmHinge" translation="2.98106 -0.16284 -0.000846481" nodeId="71" materialIds="8" shapeId="9" castsShadows="true" receiveShadows="true">
+            <Shape name="leftArmEnd" translation="0.110156 0.082831 0.000782967" nodeId="72" materialIds="8" shapeId="10" castsShadows="true" receiveShadows="true">
+              <TransformGroup name="sprayValve1" translation="2.81151 -0.189847 0.020835" nodeId="73"/>
+              <TransformGroup name="sprayValve2" translation="2.16632 -0.189847 0.020835" nodeId="74"/>
+              <TransformGroup name="sprayValve3" translation="1.52193 -0.189847 0.020835" nodeId="75"/>
+              <TransformGroup name="sprayValve4" translation="0.875762 -0.189847 0.020835" nodeId="76"/>
+              <TransformGroup name="sprayValve5" translation="0.230702 -0.189847 0.020835" nodeId="77"/>
+              <TransformGroup name="startIndex" translation="3.1 -0.545281 0.311545" nodeId="78"/>
+              <TransformGroup name="widthIndex" translation="-0.0434608 -0.545281 0.31106" nodeId="79"/>
+              <TransformGroup name="heightIndex" translation="3.1 -0.545281 -0.340399" nodeId="80"/>
+              <TransformGroup name="foldJointLeft2" translation="0.00245635 -0.0821879 -0.00147882" nodeId="81"/>
+            </Shape>
+          </Shape>
+          <TransformGroup name="foldJointLeft1" translation="0.000699259 -0.150259 -0.00154234" nodeId="82"/>
+          <TransformGroup name="sprayValve1" translation="2.78875 -0.269856 0.0207715" nodeId="83"/>
+          <TransformGroup name="sprayValve2" translation="2.14311 -0.269856 0.0207715" nodeId="84"/>
+          <TransformGroup name="sprayValve3" translation="1.49872 -0.269856 0.0207715" nodeId="85"/>
+          <TransformGroup name="sprayValve4" translation="0.853697 -0.269856 0.0207715" nodeId="86"/>
+          <TransformGroup name="sprayValve5" translation="0.209591 -0.269856 0.0207715" nodeId="87"/>
+          <TransformGroup name="startIndex" translation="3.05004 -0.62529 0.311481" nodeId="88"/>
+          <TransformGroup name="widthIndex" translation="-0.149131 -0.62529 0.310997" nodeId="89"/>
+          <TransformGroup name="heightIndex" translation="3.05 -0.62529 -0.340463" nodeId="90"/>
+        </Shape>
+      </Shape>
+      <Shape name="triton500_col" translation="0 0.752299 -0.586133" visibility="false" compoundChild="true" collisionMask="8194" density="0.1" nodeId="91" materialIds="7" shapeId="11" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <TransformGroup name="sprayValve1" translation="1.29032 0.355434 -0.581252" nodeId="92"/>
+      <TransformGroup name="sprayValve2" translation="0.644491 0.355434 -0.581252" nodeId="93"/>
+      <TransformGroup name="sprayValve3" translation="0.000619204 0.355434 -0.558225" nodeId="94"/>
+      <TransformGroup name="sprayValve4" translation="-0.644941 0.355434 -0.558225" nodeId="95"/>
+      <TransformGroup name="sprayValve5" translation="-1.28981 0.355434 -0.558225" nodeId="96"/>
+    </Shape>
+    <Shape name="triton500_foldingRight1" translation="-3.19252 0.632941 -0.595567" visibility="false" dynamic="true" collisionMask="8194" staticFriction="0.6" dynamicFriction="0.6" density="0.8" clipDistance="150" nodeId="97" materialIds="7" shapeId="12" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    <Shape name="triton500_foldingRight2" translation="-6.25547 0.551652 -0.595567" visibility="false" dynamic="true" collisionMask="8194" staticFriction="0.6" dynamicFriction="0.6" density="0.8" clipDistance="150" nodeId="98" materialIds="7" shapeId="13" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    <Shape name="triton500_foldingLeft1" translation="3.34192 0.628109 -0.595567" visibility="false" dynamic="true" collisionMask="8194" staticFriction="0.6" dynamicFriction="0.6" density="0.8" clipDistance="150" nodeId="99" materialIds="7" shapeId="14" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    <Shape name="triton500_foldingLeft2" translation="6.40196 0.547264 -0.595567" visibility="false" dynamic="true" collisionMask="8194" staticFriction="0.6" dynamicFriction="0.6" density="0.8" clipDistance="150" nodeId="100" materialIds="7" shapeId="15" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+  </Scene>
+
+  <Animation>
+    <AnimationSets>
+      <AnimationSet name="foldRightCharSet02">
+        <Clip name="foldRightClip1Source" duration="5000">
+          <Keyframes nodeId="50">
+            <Keyframe time="41.6667" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="2500" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="4583.33" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="5000" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+          </Keyframes>
+          <Keyframes nodeId="49">
+            <Keyframe time="41.6667" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="2500" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="5000" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+          </Keyframes>
+        </Clip>
+      </AnimationSet>
+      <AnimationSet name="foldLeftCharSet02">
+        <Clip name="foldLeftClip1Source" duration="5000">
+          <Keyframes nodeId="72">
+            <Keyframe time="41.6667" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="2500" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="5000" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+          </Keyframes>
+          <Keyframes nodeId="71">
+            <Keyframe time="41.6667" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="2500" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="5000" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+          </Keyframes>
+        </Clip>
+      </AnimationSet>
+      <AnimationSet name="foldLeftCharSet01">
+        <Clip name="foldLeftClipSource" duration="5000">
+          <Keyframes nodeId="69">
+            <Keyframe time="41.6667" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="2500" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="3458.33" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="5000" rotation="-0 90 0" iprin="linear" iprout="linear"/>
+          </Keyframes>
+          <Keyframes nodeId="70">
+            <Keyframe time="41.6667" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="2500" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="3458.33" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="5000" rotation="-0 90 0" iprin="linear" iprout="linear"/>
+          </Keyframes>
+        </Clip>
+      </AnimationSet>
+      <AnimationSet name="foldRightCharSet01">
+        <Clip name="foldRightClipSource" duration="5000">
+          <Keyframes nodeId="47">
+            <Keyframe time="41.6667" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="2083.33" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="2500" rotation="0 -14.9966 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="4583.33" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="5000" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+          </Keyframes>
+          <Keyframes nodeId="48">
+            <Keyframe time="41.6667" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="2083.33" rotation="0 -0 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="2500" rotation="0 -14.9966 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="4583.33" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+            <Keyframe time="5000" rotation="0 -90 0" iprin="linear" iprout="linear"/>
+          </Keyframes>
+        </Clip>
+      </AnimationSet>
+    </AnimationSets>
+  </Animation>
+
+</i3D>

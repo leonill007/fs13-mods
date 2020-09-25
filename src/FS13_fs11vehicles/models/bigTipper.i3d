@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="bigTipper" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="14" filename="../scripts/emissiveBillboardShader.xml" relativePath="true"/>
+    <File fileId="13" filename="../textures/car_corona_red_diffuse.png" relativePath="true"/>
+    <File fileId="8" filename="../textures/chaff_diffuse.png" relativePath="true"/>
+    <File fileId="6" filename="../textures/maize_diffuse.png" relativePath="true"/>
+    <File fileId="9" filename="../textures/potatoes_diffuse.png" relativePath="true"/>
+    <File fileId="10" filename="../textures/potatoes_normal.png" relativePath="true"/>
+    <File fileId="7" filename="../textures/rape_diffuse.png" relativePath="true"/>
+    <File fileId="11" filename="../textures/sugarBeets_diffuse.png" relativePath="true"/>
+    <File fileId="12" filename="../textures/sugarBeets_normal.png" relativePath="true"/>
+    <File fileId="2" filename="../textures/trailers/bigTipperWheel_diffuse.png" relativePath="true"/>
+    <File fileId="3" filename="../textures/trailers/bigTipperWheel_normal.png" relativePath="true"/>
+    <File fileId="4" filename="../textures/trailers/bigTipper_diffuse.png" relativePath="true"/>
+    <File fileId="5" filename="../textures/wheat01.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="sugarBeet_mat" materialId="10" ambientColor="1 1 1">
+      <Texture fileId="11"/>
+      <Normalmap fileId="12"/>
+    </Material>
+    <Material name="lambert1" materialId="11" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="maizePlane_mat" materialId="13" ambientColor="1 1 1">
+      <Texture fileId="6"/>
+    </Material>
+    <Material name="potatoes_mat" materialId="15" ambientColor="1 1 1">
+      <Texture fileId="9"/>
+      <Normalmap fileId="10"/>
+    </Material>
+    <Material name="rapePlane_mat" materialId="16" ambientColor="1 1 1">
+      <Texture fileId="7"/>
+    </Material>
+    <Material name="bigTipper_diffuse" materialId="17" ambientColor="1 1 1" cosPower="10" specularColor="0.12396 0.12396 0.12396">
+      <Texture fileId="4"/>
+    </Material>
+    <Material name="bigTipperWheel_diffuse" materialId="18" ambientColor="1 1 1" cosPower="10" specularColor="0.16528 0.16528 0.16528">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+    </Material>
+    <Material name="chaffPlane_mat" materialId="7" ambientColor="1 1 1">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="backCoronas:coronaMat_back" materialId="9" ambientColor="1 1 1" alphaBlending="true" customShaderId="14">
+      <Emissivemap fileId="13"/>
+    </Material>
+    <Material name="emissiveLight_mat" materialId="12" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+      <Emissivemap fileId="4"/>
+    </Material>
+    <Material name="wheatPlane_mat" materialId="14" ambientColor="1 1 1">
+      <Texture fileId="5"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="bigTipper.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="bigTipper" dynamic="true" compound="true" collisionMask="8397058" density="0.055" clipDistance="300" nodeId="86" materialIds="11" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <Shape name="wheels00" translation="0.952727 0.74 3.1" nodeId="87" materialIds="18" shapeId="2" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheels01" translation="-0.952727 0.74 3.1" nodeId="88" materialIds="18" shapeId="3" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheels02" translation="0.952727 0.74 1.3" nodeId="89" materialIds="18" shapeId="4" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheels03" translation="-0.952727 0.74 1.3" nodeId="90" materialIds="18" shapeId="5" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheels04" translation="0.952727 0.74 -0.5" nodeId="91" materialIds="18" shapeId="6" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheels05" translation="-0.952727 0.74 -0.5" nodeId="92" materialIds="18" shapeId="7" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="attacherJoint" translation="-0.00247596 1.09538 8.25633" rotation="0 90 0" nodeId="93"/>
+      <TransformGroup name="tipReferencePoint" translation="0 0 -3.79738" nodeId="94"/>
+      <TransformGroup name="trailerAttacherJoint" translation="-2.84217e-016 1.077 -2.22277" rotation="0 90 0" nodeId="95"/>
+      <Shape name="tank" translation="0.541773 1.51801 -2.07744" nodeId="96" materialIds="17" shapeId="8" castsShadows="true" receiveShadows="true">
+        <Shape name="tank|cylinder1" translation="0.710673 0.195303 -0.321683" rotation="28.799 -0 0" nodeId="97" materialIds="17" shapeId="9" castsShadows="true" receiveShadows="true">
+          <Shape name="tank|cylinder1|cylndr02" translation="0.0216889 0.280165 0.000739824" rotation="3.18055e-015 -0 0" nodeId="98" materialIds="17" shapeId="10" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape name="tank|cylinder2" translation="-1.79466 0.195303 -0.321683" rotation="28.799 -0 0" nodeId="99" materialIds="17" shapeId="11" castsShadows="true" receiveShadows="true">
+          <Shape name="tank|cylinder2|cylndr02" translation="0.0216889 0.275862 0.000739824" rotation="3.18055e-015 -0 0" nodeId="100" materialIds="17" shapeId="12" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape name="klappeNew" translation="0.637987 1.84672 1.16608" nodeId="101" materialIds="17" shapeId="13" castsShadows="true" receiveShadows="true"/>
+        <Shape name="wheatPlane" translation="-0.541773 0.56542 3.29341" visibility="false" nodeId="102" materialIds="14" shapeId="14" castsShadows="true" receiveShadows="true"/>
+        <Shape name="maizePlane" translation="-0.541773 0.56542 3.29341" visibility="false" nodeId="103" materialIds="13" shapeId="15" castsShadows="true" receiveShadows="true"/>
+        <Shape name="rapePlane" translation="-0.541773 0.56542 3.29341" visibility="false" nodeId="104" materialIds="16" shapeId="16" castsShadows="true" receiveShadows="true"/>
+        <Shape name="chaffPlane" translation="-0.541773 0.56542 3.29341" visibility="false" nodeId="105" materialIds="7" shapeId="17" castsShadows="true" receiveShadows="true"/>
+        <Shape name="potatoPlane" translation="-0.541773 0.56542 3.29341" visibility="false" nodeId="107" materialIds="15" shapeId="17" castsShadows="true" receiveShadows="true"/>
+        <Shape name="sugarBeetPlane" translation="-0.541773 0.56542 3.29341" visibility="false" nodeId="106" materialIds="10" shapeId="17" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape name="cylinderRootNew" translation="0 1.17845 0.795281" clipDistance="50" nodeId="108" materialIds="17" shapeId="18" castsShadows="true" receiveShadows="true">
+        <Shape name="cylinderRootNew|cylinder1" translation="0 0 7.62939e-008" nodeId="109" materialIds="17" shapeId="19" castsShadows="true" receiveShadows="true">
+          <Shape name="cylinderRootNew|cylinder1|cylinder2" nodeId="110" materialIds="17" shapeId="20" castsShadows="true" receiveShadows="true">
+            <Shape name="cylinder3" nodeId="111" materialIds="17" shapeId="21" castsShadows="true" receiveShadows="true">
+              <Shape name="cylinder4" nodeId="112" materialIds="17" shapeId="22" castsShadows="true" receiveShadows="true"/>
+            </Shape>
+          </Shape>
+        </Shape>
+      </Shape>
+      <Shape name="bigTipperBase" nodeId="113" materialIds="17" shapeId="23" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="lights" visibility="false" nodeId="114">
+        <Shape name="backLights" nodeId="115" materialIds="12" shapeId="24" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <Shape name="exactFillRootNode" visibility="false" kinematic="true" collisionMask="1073741824" density="0.01" clipDistance="200" nodeId="116" materialIds="11" shapeId="25" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <TransformGroup name="fillAutoAimTargetNode" translation="0 4.32435 2.1869" nodeId="117"/>
+      <TransformGroup name="support" translation="0 0 7.484" nodeId="118">
+        <TransformGroup name="supportJoint" translation="0 0.293965 -2.27374e-015" nodeId="119"/>
+      </TransformGroup>
+      <TransformGroup name="lightCoronas" visibility="false" nodeId="120">
+        <Shape name="coronaBackRight" translation="0.882633 1.26106 -2.17727" rotation="0 180 0" nodeId="121" materialIds="9" shapeId="26"/>
+        <Shape name="coronaBackRight1" translation="-0.883 1.26106 -2.17727" rotation="0 180 0" nodeId="122" materialIds="9" shapeId="26"/>
+      </TransformGroup>
+      <Shape name="wheelLeftCol" translation="0.902347 0.782824 3.08164" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.001" nodeId="123" materialIds="11" shapeId="27" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelRightCol" translation="-0.899543 0.782824 3.08164" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.001" nodeId="124" materialIds="11" shapeId="28" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelRearLeftCol" translation="0.902347 0.782824 1.31338" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.001" nodeId="125" materialIds="11" shapeId="29" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelRearRightCol" translation="-0.899543 0.782824 1.31338" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.001" nodeId="126" materialIds="11" shapeId="30" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelRearRightCol1" translation="-0.899543 0.782824 -0.495191" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.001" nodeId="127" materialIds="11" shapeId="31" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelRearLeftCol1" translation="0.902347 0.782824 -0.495191" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.001" nodeId="128" materialIds="11" shapeId="32" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+    <Shape name="floorCol" translation="0 1.82945e-008 7.48421" dynamic="true" nodeId="129" materialIds="11" shapeId="33" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+  </Scene>
+
+  <Animation>
+    <AnimationSets>
+      <AnimationSet name="character1">
+        <Clip name="clip1Source" duration="5000">
+          <Keyframes nodeId="111">
+            <Keyframe time="41.6667" translation="0 0 0"/>
+            <Keyframe time="5000" translation="0 0.6 -1.14441e-007"/>
+          </Keyframes>
+          <Keyframes nodeId="112">
+            <Keyframe time="41.6667" translation="0 0 0"/>
+            <Keyframe time="5000" translation="0 0.6 -2.84217e-016"/>
+          </Keyframes>
+          <Keyframes nodeId="108">
+            <Keyframe time="41.6667" rotation="0 -0 0"/>
+            <Keyframe time="5000" rotation="-27.9817 0 0"/>
+          </Keyframes>
+          <Keyframes nodeId="109">
+            <Keyframe time="41.6667" translation="0 0 7.62939e-008"/>
+            <Keyframe time="5000" translation="0 0.6 7.62939e-008"/>
+          </Keyframes>
+          <Keyframes nodeId="110">
+            <Keyframe time="41.6667" translation="0 0 0"/>
+            <Keyframe time="5000" translation="0 0.6 -3.8147e-008"/>
+          </Keyframes>
+          <Keyframes nodeId="101">
+            <Keyframe time="41.6667" rotation="0 -0 0"/>
+            <Keyframe time="5000" rotation="60.0016 -0 0"/>
+          </Keyframes>
+          <Keyframes nodeId="96">
+            <Keyframe time="41.6667" rotation="0 -0 0"/>
+            <Keyframe time="5000" rotation="-50.9826 0 0"/>
+          </Keyframes>
+          <Keyframes nodeId="97">
+            <Keyframe time="41.6667" rotation="28.8002 -0 0"/>
+            <Keyframe time="833.333" rotation="27.4991 -0 0"/>
+            <Keyframe time="1666.67" rotation="26.8655 -0 0"/>
+            <Keyframe time="2500" rotation="26.4991 -0 0"/>
+            <Keyframe time="3333.33" rotation="26.7001 -0 0"/>
+            <Keyframe time="4166.67" rotation="27.4991 -0 0"/>
+            <Keyframe time="5000" rotation="28.3999 -0 0"/>
+          </Keyframes>
+          <Keyframes nodeId="98">
+            <Keyframe time="41.6667" translation="0.0216889 0.280165 0.000739824"/>
+            <Keyframe time="5000" translation="0.0216889 0.870469 0.000739824"/>
+          </Keyframes>
+          <Keyframes nodeId="99">
+            <Keyframe time="41.6667" rotation="28.8002 -0 0"/>
+            <Keyframe time="833.333" rotation="27.6 -0 0"/>
+            <Keyframe time="1666.67" rotation="26.801 -0 0"/>
+            <Keyframe time="2500" rotation="26.5355 -0 0"/>
+            <Keyframe time="3333.33" rotation="26.801 -0 0"/>
+            <Keyframe time="4166.67" rotation="27.6145 -0 0"/>
+            <Keyframe time="5000" rotation="28.3999 -0 0"/>
+          </Keyframes>
+          <Keyframes nodeId="100">
+            <Keyframe time="41.6667" translation="0.0216889 0.275862 0.000739824"/>
+            <Keyframe time="5000" translation="0.0216889 0.890813 0.000739824"/>
+          </Keyframes>
+        </Clip>
+      </AnimationSet>
+    </AnimationSets>
+  </Animation>
+
+</i3D>

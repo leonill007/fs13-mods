@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="lizard7210" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="19" filename="../scripts/emissiveBillboardShader.xml" relativePath="true"/>
+    <File fileId="17" filename="../textures/car_beam_diffuse.png" relativePath="true"/>
+    <File fileId="18" filename="../textures/car_corona_white_diffuse.png" relativePath="true"/>
+    <File fileId="20" filename="../textures/corona_orange.png" relativePath="true"/>
+    <File fileId="14" filename="../textures/farmerHair_diffuse.png" relativePath="true"/>
+    <File fileId="15" filename="../textures/farmerHair_normal.png" relativePath="true"/>
+    <File fileId="16" filename="../textures/farmerHair_specular.png" relativePath="true"/>
+    <File fileId="11" filename="../textures/farmer_diffuse.png" relativePath="true"/>
+    <File fileId="12" filename="../textures/farmer_normal.png" relativePath="true"/>
+    <File fileId="13" filename="../textures/farmer_specular.png" relativePath="true"/>
+    <File fileId="9" filename="../textures/maize_diffuse.png" relativePath="true"/>
+    <File fileId="10" filename="../textures/rape_diffuse.png" relativePath="true"/>
+    <File fileId="3" filename="../textures/steerable/lizard2850BackWheel_normal.png" relativePath="true"/>
+    <File fileId="5" filename="../textures/steerable/lizard2850FrontWheel_normal.png" relativePath="true"/>
+    <File fileId="4" filename="../textures/steerable/lizard7210BackWheel_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="../textures/steerable/lizard7210FrontWheel_diffuse.png" relativePath="true"/>
+    <File fileId="6" filename="../textures/steerable/lizard7210_diffuse.png" relativePath="true"/>
+    <File fileId="7" filename="../textures/steerable/lizard7210_normal.png" relativePath="true"/>
+    <File fileId="8" filename="../textures/wheat01.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lizard7210EmissiveLights_diffuse" materialId="9" ambientColor="1 1 1">
+      <Emissivemap fileId="6"/>
+    </Material>
+    <Material name="maizePlane_mat" materialId="10" ambientColor="1 1 1">
+      <Texture fileId="9"/>
+    </Material>
+    <Material name="rapePlane_mat" materialId="11" ambientColor="1 1 1">
+      <Texture fileId="10"/>
+    </Material>
+    <Material name="lambert1" materialId="14" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="beaconLight:warnLight_mat" materialId="13" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5" alphaBlending="true" customShaderId="19">
+      <Emissivemap fileId="20"/>
+    </Material>
+    <Material name="lizard7210FrontWheel_diffuse" materialId="15" ambientColor="1 1 1" cosPower="10" specularColor="0.14876 0.14876 0.14876">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+    </Material>
+    <Material name="lizard7210BackWheel_diffuse" materialId="16" ambientColor="1 1 1" cosPower="10" specularColor="0.14876 0.14876 0.14876">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="lizard7210_diffuse" materialId="7" ambientColor="1 1 1" cosPower="10" specularColor="0.26446 0.26446 0.26446">
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+    </Material>
+    <Material name="wheatPlane_mat" materialId="8" ambientColor="1 1 1">
+      <Texture fileId="8"/>
+    </Material>
+    <Material name="phong5" materialId="19" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="11"/>
+      <Normalmap fileId="12"/>
+      <Glossmap fileId="13"/>
+    </Material>
+    <Material name="farmerHair_mat" materialId="17" ambientColor="1 1 1" cosPower="1.24573" specularColor="1 1 1">
+      <Texture fileId="14"/>
+      <Normalmap fileId="15"/>
+      <Glossmap fileId="16"/>
+    </Material>
+    <Material name="coronaMat_front" materialId="18" ambientColor="1 1 1" alphaBlending="true" customShaderId="19">
+      <Emissivemap fileId="18"/>
+    </Material>
+    <Material name="tempLit_Standard_2" materialId="20" ambientColor="1 1 1" alphaBlending="true">
+      <Emissivemap fileId="17"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="lizard7210.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="lizard7210" dynamic="true" compound="true" collisionMask="4202626" density="0.1" clipDistance="300" nodeId="78" materialIds="14" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <Shape name="lizard7210|tire_front_left" translation="1.20539 0.897939 0.93786" nodeId="79" materialIds="15" shapeId="2" castsShadows="true" receiveShadows="true"/>
+      <Shape name="lizard7210|tire_front_right" translation="-1.20736 0.897939 0.93786" nodeId="80" materialIds="15" shapeId="3" castsShadows="true" receiveShadows="true"/>
+      <Shape name="lizard7210|tire_back_right" translation="-0.799 0.53523 -2.85297" nodeId="81" materialIds="16" shapeId="4" castsShadows="true" receiveShadows="true"/>
+      <Shape name="lizard7210|tire_back_left" translation="0.799064 0.53523 -2.85297" nodeId="82" materialIds="16" shapeId="5" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="startIndex" nodeId="83"/>
+      <TransformGroup name="widthIndex" nodeId="84"/>
+      <TransformGroup name="heightIndex" nodeId="85"/>
+      <TransformGroup name="camera1Target" translation="0 2.5 0" rotation="-24 180 0" nodeId="86">
+        <Camera name="camera1" translation="-4.48293e-017 3.41061e-015 16" nodeId="87" fov="54.4322" nearClip="0.1" farClip="5000"/>
+      </TransformGroup>
+      <Camera name="camera2" translation="-0.0158851 3.72815 1.57428" rotation="-7 180 0" nodeId="88" fov="75" nearClip="0.1" farClip="5000"/>
+      <TransformGroup name="attacherJointRot" translation="0 1.83401 0.970828" nodeId="89">
+        <TransformGroup name="attacherJointRot2" translation="0 -0.585839 1.6154" nodeId="90">
+          <TransformGroup name="attacherJoint" rotation="-90 -65 90" nodeId="91"/>
+        </TransformGroup>
+        <Shape name="attacher" nodeId="92" materialIds="7" shapeId="6" castsShadows="true" receiveShadows="true">
+          <Shape name="polySurface8" translation="0 -1.71549 -1.16755" visibility="false" nodeId="93" materialIds="7" shapeId="7" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+      </TransformGroup>
+      <TransformGroup name="exitPoint" translation="2.2729 0 1.58133" nodeId="94"/>
+      <TransformGroup name="chopperBlind" translation="0 1.57896 -3.76516" nodeId="95"/>
+      <Shape name="pipe" translation="1.07476 2.4088 0.214134" nodeId="96" materialIds="7" shapeId="8" castsShadows="true" receiveShadows="true">
+        <TransformGroup name="raycastNode" translation="0.379186 0.798068 -3.48197" nodeId="97"/>
+        <TransformGroup name="pipeColJoint" translation="-5.32907e-017 0 0" nodeId="98"/>
+      </Shape>
+      <TransformGroup name="frontLightGroup" nodeId="99">
+        <Light name="frontLight" translation="-4.29223e-016 3.20164 2.75062" rotation="160 0 180" nodeId="100" type="spot" diffuseColor="1 1 0.7" emitDiffuse="true" specularColor="1 1 0.7" emitSpecular="true" decayRate="1" range="50" coneAngle="100" dropOff="2"/>
+        <Shape name="frontlightEmissive" nodeId="101" materialIds="9" shapeId="9" castsShadows="true" receiveShadows="true"/>
+        <Shape name="backlightsEmissive" nodeId="102" materialIds="9" shapeId="10" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="steeringBase" rotation="-25 0 0" nodeId="103">
+        <Shape name="steering" translation="-0.0285769 2.04959 3.21906" nodeId="104" materialIds="7" shapeId="11" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="grainPlanes" nodeId="105">
+        <Shape name="wheatPlane" translation="0.0539365 2.76049 0.47497" nodeId="106" materialIds="8" shapeId="12" receiveShadows="true"/>
+        <Shape name="maizePlane" translation="0.0539365 2.76049 0.47497" nodeId="107" materialIds="10" shapeId="12" receiveShadows="true"/>
+        <Shape name="rapePlane" translation="0.0539365 2.76049 0.47497" nodeId="108" materialIds="11" shapeId="12" receiveShadows="true"/>
+      </TransformGroup>
+      <Shape name="farmer" translation="-0.0148914 3.13074 1.71439" nodeId="109" materialIds="19" shapeId="13" castsShadows="true" receiveShadows="true">
+        <Shape name="farmer_hair" translation="-0.0164179 -1.04899 -0.228741" visibility="false" nodeId="110" materialIds="17" shapeId="14" castsShadows="true" receiveShadows="true"/>
+        <Shape name="famer_hat" translation="-0.0149473 -1.04899 -0.244259" nodeId="111" materialIds="19" shapeId="15" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <TransformGroup name="mulchStartPos" translation="0.571036 0 -4.87922" nodeId="112"/>
+      <TransformGroup name="mulchWidthPos" translation="-0.571 0 -4.87922" nodeId="113"/>
+      <TransformGroup name="mulchHeightPos" translation="0.571036 0 -5.66527" nodeId="114"/>
+      <Shape name="trailerTrigger" translation="5.43851 0 0.54668" visibility="false" kinematic="true" trigger="true" collisionMask="8388608" nodeId="115" materialIds="14" shapeId="16" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="trafficCollisionTrigger" translation="0 1.80426 2.52809" visibility="false" kinematic="true" trigger="true" collisionMask="1056768" nodeId="116" materialIds="14" shapeId="17" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <TransformGroup name="lightCones" visibility="false" nodeId="117">
+        <Shape name="lightCones_vis" nodeId="118" materialIds="20" shapeId="18" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="lightCoronas" visibility="false" nodeId="119">
+        <Shape name="coronaFrontLeft7" translation="0.390907 2.09232 2.38942" nodeId="120" materialIds="18" shapeId="19"/>
+        <Shape name="coronaFrontLeft8" translation="-0.442444 2.10154 2.3862" nodeId="121" materialIds="18" shapeId="19"/>
+        <Shape name="coronaFrontLeft9" translation="-1.1123 2.28294 2.52881" nodeId="122" materialIds="18" shapeId="20"/>
+        <Shape name="coronaFrontLeft10" translation="1.00629 2.28294 2.52881" nodeId="123" materialIds="18" shapeId="20"/>
+      </TransformGroup>
+      <TransformGroup name="beaconLight1" translation="0.668484 4.1038 0.5208" visibility="false" nodeId="124">
+        <Shape name="beaconLight_vis" translation="0 0.068194 0.105429" rotation="-14.2139 0 0" nodeId="125" materialIds="13" shapeId="21"/>
+      </TransformGroup>
+      <TransformGroup name="cameraRaycastNode1" translation="0 3.15881 2.29461" nodeId="126"/>
+      <TransformGroup name="cameraRaycastNode2" translation="0 3.18861 -2.52307" nodeId="127"/>
+      <Shape name="lizard7210_vis" nodeId="128" materialIds="7" shapeId="22" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheel_front_left_col" translation="1.20511 0.979679 0.928468" visibility="false" compoundChild="true" collisionMask="4202626" staticFriction="0" dynamicFriction="0" density="0.1" nodeId="129" materialIds="14" shapeId="23" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheel_front_right_col1" translation="-1.205 0.979679 0.928468" visibility="false" compoundChild="true" collisionMask="4202626" staticFriction="0" dynamicFriction="0" density="0.1" nodeId="130" materialIds="14" shapeId="23" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheel_back_left_col" translation="0.794759 0.644534 -2.85517" visibility="false" compoundChild="true" collisionMask="4202626" staticFriction="0" dynamicFriction="0" density="0.1" nodeId="131" materialIds="14" shapeId="24" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheel_back_left_col1" translation="-0.795 0.644534 -2.85517" visibility="false" compoundChild="true" collisionMask="4202626" staticFriction="0" dynamicFriction="0" density="0.1" nodeId="132" materialIds="14" shapeId="24" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+    <Shape name="lizard7210pipeCollision" translation="1.476 2.34515 -1.47505" visibility="false" dynamic="true" compound="true" collisionMask="8194" density="0.3" nodeId="133" materialIds="14" shapeId="25" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <Shape name="pipe_col" translation="-0.0134908 0.885176 -1.71267" compoundChild="true" collisionMask="8194" density="0.3" nodeId="134" materialIds="14" shapeId="26" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="pipe_col1" translation="-0.0414675 0.885176 1.95828" compoundChild="true" collisionMask="8194" density="0.3" nodeId="135" materialIds="14" shapeId="27" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="pipe_col2" translation="-0.25369 0.885176 2.15666" rotation="0 -54.0942 0" compoundChild="true" collisionMask="8194" density="0.3" nodeId="136" materialIds="14" shapeId="28" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="111">
+      <Attribute name="MaxHandle" type="integer" value="90"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="smallManureBarrel" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="../scripts/emissiveBillboardShader.xml" relativePath="true"/>
+    <File fileId="4" filename="../textures/car_corona_red_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="../textures/trailers/smallManureBarrelWheel_diffuse.png" relativePath="true"/>
+    <File fileId="3" filename="../textures/trailers/smallManureBarrel_diffuse.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="7" diffuseColor="0.498039 0.498039 0.498039 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="smallManureBarrel_mat" materialId="8" ambientColor="1 1 1">
+      <Texture fileId="3"/>
+    </Material>
+    <Material name="smallManureBarrelWheel_mat" materialId="9" ambientColor="1 1 1">
+      <Texture fileId="2"/>
+    </Material>
+    <Material name="lights_mat" materialId="10" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+      <Emissivemap fileId="3"/>
+    </Material>
+    <Material name="coronaBack_mat" materialId="12" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5" alphaBlending="true" customShaderId="5">
+      <Emissivemap fileId="4"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="smallManureBarrel.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="smallManureBarrel" dynamic="true" compound="true" collisionMask="8397058" density="0.07" clipDistance="300" nodeId="36" materialIds="7" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <Shape name="wheel01" translation="-1.1397 0.768 -0.714515" nodeId="37" materialIds="9" shapeId="2" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheel02" translation="1.1397 0.768 -0.714515" nodeId="38" materialIds="9" shapeId="3" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="attacherJoint" translation="-1.90772e-007 1.00119 5.8706" rotation="0 90 0" nodeId="39"/>
+      <TransformGroup name="smallManureBarrel|lights" nodeId="40">
+        <Shape name="smallManureBarrel|lights|lights" translation="0.000217171 0.780955 -2.56557" nodeId="41" materialIds="10" shapeId="4" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <Shape name="supporter" translation="0.5472 0.312 3.56108" nodeId="42" materialIds="8" shapeId="5" castsShadows="true" receiveShadows="true">
+        <TransformGroup name="supportJoint" translation="7.10543e-017 0.0507314 0" nodeId="43"/>
+      </Shape>
+      <TransformGroup name="sprayAreaStart" translation="-7.5 0 -3.26599" nodeId="44"/>
+      <TransformGroup name="sprayAreaWidth" translation="7.5 0 -3.26599" nodeId="45"/>
+      <TransformGroup name="sprayAreaHeight" translation="-7.5 0 -4.27962" nodeId="46"/>
+      <TransformGroup name="sprayValve" translation="0 1.11848 -2.37445" rotation="99.2095 0 0" nodeId="47"/>
+      <TransformGroup name="lightCoronas" nodeId="48">
+        <Shape name="coronaBackRight" translation="-1.091 0.776041 -2.62247" rotation="0 180 0" nodeId="49" materialIds="12" shapeId="6"/>
+        <Shape name="coronaBackLeft" translation="1.09136 0.776307 -2.62247" rotation="0 180 0" nodeId="50" materialIds="12" shapeId="6"/>
+      </TransformGroup>
+      <Shape name="smallManureBarrel_vis" nodeId="51" materialIds="8" shapeId="8" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheelRearLeftCol" translation="1.1416 0.777339 -0.722811" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.001" nodeId="52" materialIds="7" shapeId="9" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelRearRightCol" translation="-1.14324 0.777339 -0.722811" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.001" nodeId="53" materialIds="7" shapeId="10" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+    <Shape name="supportWheelCollision" translation="0.548347 0.113029 3.55879" visibility="false" dynamic="true" collisionMask="8450" nodeId="54" materialIds="7" shapeId="11" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="42">
+      <Attribute name="MaxHandle" type="integer" value="3"/>
+    </UserAttribute>
+    <UserAttribute nodeId="37">
+      <Attribute name="MaxHandle" type="integer" value="4"/>
+    </UserAttribute>
+    <UserAttribute nodeId="38">
+      <Attribute name="MaxHandle" type="integer" value="4"/>
+    </UserAttribute>
+    <UserAttribute nodeId="41">
+      <Attribute name="MaxHandle" type="integer" value="3"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

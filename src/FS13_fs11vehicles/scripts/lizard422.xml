@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="tractor_cylindered">
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <en>Lizard 422</en>
+    </name>
+    <filename>models/lizard422.i3d</filename>
+	
+    <wheels autoRotateBackSpeed="2.5">
+        <wheel rotSpeed="70" rotMax="32" rotMin="-32" driveMode="2" repr="0" driveNode="0|0" radius="0.5" deltaY="0.15" suspTravel="0.2" spring="60" damper="20" mass="0.13" longitudalStiffness="0.9" lateralStiffness="2" />
+        <wheel rotSpeed="70" rotMax="32" rotMin="-32" driveMode="2" repr="1" driveNode="1|0" radius="0.5" deltaY="0.15" suspTravel="0.2" spring="60" damper="20" mass="0.13" longitudalStiffness="0.9" lateralStiffness="2" />
+        <wheel rotSpeed="0" driveMode="1" repr="2" radius="0.830" deltaY="0.18" suspTravel="0.2" spring="60" damper="20" mass="0.2" longitudalStiffness="0.9" lateralStiffness="2" />
+        <wheel rotSpeed="0" driveMode="1" repr="3" radius="0.830" deltaY="0.18" suspTravel="0.2" spring="60" damper="20" mass="0.2" longitudalStiffness="0.9" lateralStiffness="2" />
+    </wheels>
+
+    <motor minRpm="100" maxRpm="900 1450 2300 800" maxTorques="1.0 1.5 -1 1.0" brakeForce="5" lowBrakeForceScale="0.5" lowBrakeForceSpeedLimit="1" accelerations="0.4 1 1 1" forwardGearRatio="13.5" backwardGearRatio="5" differentialRatio="1" rpmFadeOutRange="50">
+		<torque rpm="2300" torque="2.1"/>
+
+        <backwardTorque rpm="250" torque="6"/>
+		<backwardTorque rpm="400" torque="1.4"/>
+
+    </motor>
+    <accelerationSpeed maxAcceleration="0.4" deceleration="0.25" backwardDeceleration="0.7" />
+    <fuelCapacity>140</fuelCapacity>
+    <fuelUsage>0.002</fuelUsage>
+    <downForce>7</downForce>
+    <cameras count="2">
+        <camera1 index="4|0|0" rotatable="true" rotateNode="4|0" limit="true" rotMinX="-1.4" rotMaxX="0" transMin="4" transMax="30" >
+			<raycastNode index="0>19"/>
+			<raycastNode index="0>20"/>
+		</camera1>
+        <camera2 index="4|1" rotatable="true" limit="false" rotMinX="0" rotMaxX="0" transMin="0" transMax="0" />
+    </cameras>
+
+    <tipCamera index="4|2" />
+
+    <lights count="2">
+        <light1 index="5|0" />
+        <light2 index="5|1" />
+    </lights>
+	
+	<lightCones>
+		<lightCone index="17" />	
+	</lightCones>
+	
+	<lightCoronas>
+		<lightCorona index="18" />	
+	</lightCoronas>
+
+    <size width="3.5" length="5.5" lengthOffset="-0.4"/>
+
+    <exitPoint index="7" />
+    <steering index="8|0" rotationSpeed="6"/>
+
+    <enterReferenceNode index="0>" />
+
+    <cuttingAreas count="0">
+        <!--cuttingArea1 startIndex="6" widthIndex="7" heightIndex="8" losing="true"/-->
+    </cuttingAreas>
+
+    <trailerAttacherJoints>
+        <trailerAttacherJoint index="13" />
+        <trailerAttacherJoint index="14" low="true" />
+		<trailerAttacherJoint index="27" low="true" />
+    </trailerAttacherJoints>
+
+    <attachSound file="$data/vehicles/steerable/deutz/attach.wav" pitchOffset="1" />
+    <motorStartSound file="sounds/lizard422_start.wav" pitchOffset="0.75" volume="1" />
+    <motorSound file="sounds/lizard422_idle.wav" pitchOffset="0.65" pitchScale="0.0089" pitchMax="1.0" volume="1" />
+    <motorStopSound file="sounds/lizard422_out.wav" pitchOffset="0.9" />
+    <aiMotorSound  file="sounds/lizard422_idleAI.wav" pitchOffset="1" radius="35" innerRadius="25" volume="1.0" />
+ 
+    <exhaustParticleSystems count="1">
+        <exhaustParticleSystem1 node="16" file="$data/vehicles/particleSystems/exhaustParticleSystem.i3d" />
+    </exhaustParticleSystems>
+
+    <honkSound file="$dataS2/sounds/horn.wav" volume="1" radius="80" innerRadius="35" />
+	
+    <attacherJoints>
+        <attacherJoint index="10|0|0" rotationNode="10" maxRot="-12 0 0" rotationNode2="10|0" maxRot2="8 0 0" maxTransLimit="0 0.5 0" maxRotLimit="0 0 20" moveTime="1.5">
+            <bottomArm rotationNode="11" translationNode="11|0" referenceNode="11|0|0" zScale="-1" />
+            <topArm rotationNode="12" translationNode="12|0" referenceNode="12|0|0" zScale="-1" />
+        </attacherJoint>
+    </attacherJoints>
+
+    <characterNode index="9" cameraMinDistance="1.5" />
+    <aiTrafficCollisionTrigger index="15" />
+    <components count="1">
+        <component1 centerOfMass="0 0 -0.15" solverIterationCount="10" />
+    </components>
+	
+    <schemaOverlay file="$data/vehicles/schemas/vehicleSchema.png" fileSelected="$data/vehicles/schemas/vehicleSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0.5 0">
+        <attacherJoint position="1 0" rotation="0" invertX="false" />
+        <attacherJoint position="1 0" rotation="0" invertX="false" />
+        <attacherJoint position="1 0" rotation="0" invertX="false" />
+        <attacherJoint position="0 0" rotation="0" invertX="true" />
+    </schemaOverlay>
+
+
+</vehicle>

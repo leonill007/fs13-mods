@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="sowingMachine">
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <de>Pöttinger VITASEM A 301</de>
+    </name>
+	<typeDesc>$l10n_TypeDesc_Seeder</typeDesc>
+    <filename>models/vitasemA301.i3d</filename>
+
+    <size width="3.5" length="4.0" />
+
+    <cuttingAreas count="1">
+        <cuttingArea1 startIndex="0" widthIndex="1" heightIndex="2"/>
+    </cuttingAreas>
+
+    <needsActivation value="true" />
+
+    <fillTypes fillTypes="seeds"/>
+    <capacity>500</capacity>
+    <startFillLevel>0</startFillLevel>
+	<fillLitersPerSecond>40</fillLitersPerSecond>
+
+    <sowingSound file="$data/vehicles/tools/ploughSound.wav" pitchOffset="0.5" volume="0.3"/>
+
+    <attacherJoint index="3" jointType="implement" fixedRotation="true" topReferenceNode="4"/>
+
+    <aiLeftMarker index="6" />
+    <aiRightMarker index="7" />
+    <aiBackMarker index="8" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0 -0.1" solverIterationCount="4" />
+    </components>
+	
+    <schemaOverlay file="$data/vehicles/schemas/implementSchema.png" fileSelected="$data/vehicles/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+	
+</vehicle>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="8" filename="emissiveBillboardShader.xml" relativePath="true"/>
+    <File fileId="9" filename="textures/car_corona_red_diffuse.png" relativePath="true"/>
+    <File fileId="10" filename="textures/car_corona_white_diffuse.png" relativePath="true"/>
+    <File fileId="11" filename="textures/corona_orange.png" relativePath="true"/>
+    <File fileId="4" filename="textures/cubemapRough.dds" relativePath="true"/>
+    <File fileId="6" filename="textures/koeckerlingDecals_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="textures/koeckerlingTrio300M_diffuse.png" relativePath="true"/>
+    <File fileId="3" filename="textures/koeckerlingTrio300M_normal.png" relativePath="true"/>
+    <File fileId="5" filename="vehicleShader.xml" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="koeckerlingTrio300M_mat" materialId="8" ambientColor="1 1 1" cosPower="50" specularColor="1 1 1" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Reflectionmap fileId="4" wrap="false" type="cube" resolution="256" refractiveIndex="1" bumpScale="0.1" objectMask="2147483647"/>
+    </Material>
+    <Material name="koeckerlingDecals_mat" materialId="9" ambientColor="1 1 1" alphaBlending="true">
+      <Texture fileId="6"/>
+    </Material>
+    <Material name="car_corona_white_mat" materialId="11" ambientColor="1 1 1" alphaBlending="true" customShaderId="8">
+      <Emissivemap fileId="10"/>
+    </Material>
+    <Material name="lambert1" materialId="12" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1">
+    </Material>
+    <Material name="car_corona_red_mat" materialId="13" ambientColor="1 1 1" alphaBlending="true" customShaderId="8">
+      <Emissivemap fileId="9"/>
+    </Material>
+    <Material name="corona_orange_mat" materialId="14" ambientColor="1 1 1" alphaBlending="true" customShaderId="8">
+      <Emissivemap fileId="11"/>
+    </Material>
+    <Material name="selfIllumSL_mat" materialId="15" ambientColor="1 1 1" emissiveColor="1 1 1 0.894118" alphaBlending="true" customShaderId="8">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="koeckerlingTrio300M.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="koeckerlingTrio300M" dynamic="true" compound="true" collisionMask="8194" density="0.155" clipDistance="300" nodeId="39" materialIds="12" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <TransformGroup name="startIndex" translation="1.5 0 1.65" nodeId="40"/>
+      <TransformGroup name="widthIndex" translation="-1.5 0 1.65" nodeId="41"/>
+      <TransformGroup name="heightIndex" translation="1.5 0 -1.84886" nodeId="42"/>
+      <TransformGroup name="attacherJoint" translation="0 0.668 1.9517" rotation="0 90 0" nodeId="43"/>
+      <TransformGroup name="topReferenceNode" translation="0 1.3627 1.9494" nodeId="44"/>
+      <Shape name="koeckerlingTrio_vis" nodeId="45" materialIds="8" shapeId="2" castsShadows="true" receiveShadows="true">
+        <Shape name="decals" translation="0.113962 0 0.782052" clipDistance="50" nodeId="46" materialIds="9" shapeId="3" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape name="drum" translation="0.00468185 0.270977 -1.47069" rotation="-0.0871276 -0.0321271 0.277763" clipDistance="75" nodeId="47" materialIds="8" shapeId="4" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="aiLeftMarker" translation="1.51742 0 1.5182" nodeId="48"/>
+      <TransformGroup name="aiRightMarker" translation="-1.517 0 1.518" nodeId="49"/>
+      <TransformGroup name="aiBackMarker" translation="0 0 -1.97" nodeId="50"/>
+      <TransformGroup name="lightCoronas" visibility="false" nodeId="51">
+        <Shape name="selfIllum" translation="0.00260361 0.989496 -1.07838" nodeId="52" materialIds="15" shapeId="5" castsShadows="true" receiveShadows="true"/>
+        <Shape name="coronaLeft" translation="1.37658 0.968725 -1.15694" rotation="0 180 0" nodeId="53" materialIds="13" shapeId="6" castsShadows="true" receiveShadows="true"/>
+        <Shape name="coronaLeft1" translation="-1.377 0.968725 -1.15694" rotation="0 180 0" nodeId="54" materialIds="13" shapeId="6" castsShadows="true" receiveShadows="true"/>
+        <Shape name="coronaLeft3" translation="1.38191 0.995152 -1.00351" nodeId="55" materialIds="11" shapeId="6" castsShadows="true" receiveShadows="true"/>
+        <Shape name="coronaLeft4" translation="-1.37191 0.995152 -1.00351" nodeId="56" materialIds="11" shapeId="6" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="brakeLights" visibility="false" nodeId="57">
+        <Shape name="selfIllum" translation="0.0026033 0.965654 -1.11335" nodeId="58" materialIds="15" shapeId="7" castsShadows="true" receiveShadows="true"/>
+        <Shape name="coronaLeft" translation="1.377 0.969 -1.16346" rotation="0 180 0" nodeId="59" materialIds="13" shapeId="8" castsShadows="true" receiveShadows="true"/>
+        <Shape name="coronaLeft2" translation="-1.377 0.969 -1.16346" rotation="0 180 0" nodeId="60" materialIds="13" shapeId="8" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="turnLights" nodeId="61">
+        <TransformGroup name="left" visibility="false" nodeId="62">
+          <Shape name="turnLeft" translation="1.377 1.0085 -1.15263" rotation="0 180 0" nodeId="63" materialIds="14" shapeId="9" castsShadows="true" receiveShadows="true"/>
+          <Shape name="selfIllum" translation="1.37995 1.01 -1.11335" nodeId="64" materialIds="15" shapeId="10" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="right" visibility="false" nodeId="65">
+          <Shape name="turnRight" translation="-1.377 1.0085 -1.15263" rotation="0 180 0" nodeId="66" materialIds="14" shapeId="9" castsShadows="true" receiveShadows="true"/>
+          <Shape name="selfIllum" translation="-1.37474 1.01077 -1.11335" nodeId="67" materialIds="15" shapeId="11" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="soilAnimation" translation="0 0.069 -0.002" rotation="-1.611 0 0" nodeId="68"/>
+      <TransformGroup name="depthNode" translation="0 -0.085 0.538" rotation="-1.611 0 0" nodeId="69"/>
+    </Shape>
+  </Scene>
+
+</i3D>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="deutzF1m414" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="5.5.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="16" filename="../scripts/emissiveBillboardShader.xml" relativePath="true"/>
+    <File fileId="18" filename="../scripts/vehicleShader.xml" relativePath="true"/>
+    <File fileId="14" filename="../textures/car_beam_diffuse.png" relativePath="true"/>
+    <File fileId="15" filename="../textures/car_corona_white_diffuse.png" relativePath="true"/>
+    <File fileId="17" filename="../textures/cubemap.dds" relativePath="true"/>
+    <File fileId="11" filename="../textures/farmerHair_diffuse.png" relativePath="true"/>
+    <File fileId="12" filename="../textures/farmerHair_normal.png" relativePath="true"/>
+    <File fileId="13" filename="../textures/farmerHair_specular.png" relativePath="true"/>
+    <File fileId="8" filename="../textures/farmer_diffuse.png" relativePath="true"/>
+    <File fileId="9" filename="../textures/farmer_normal.png" relativePath="true"/>
+    <File fileId="10" filename="../textures/farmer_specular.png" relativePath="true"/>
+    <File fileId="19" filename="../textures/steerable/deutzF1m414Decals_diffuse.png" relativePath="true"/>
+    <File fileId="20" filename="../textures/steerable/deutzF1m414Decals_normal.png" relativePath="true"/>
+    <File fileId="5" filename="../textures/steerable/deutzF1m414Wheel_diffuse.png" relativePath="true"/>
+    <File fileId="2" filename="../textures/steerable/deutzF1m414_diffuse.png" relativePath="true"/>
+    <File fileId="3" filename="../textures/steerable/deutzF1m414_normal.png" relativePath="true"/>
+    <File fileId="4" filename="../textures/steerable/deutzF1m414_specular.png" relativePath="true"/>
+    <File fileId="6" filename="../textures/steerable/lizard422Wheel_normal.png" relativePath="true"/>
+    <File fileId="7" filename="../textures/steerable/lizard422Wheel_specular.png" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="f1m414_mat" materialId="7" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="tempLit_Standard" materialId="8" ambientColor="1 1 1" alphaBlending="true">
+      <Emissivemap fileId="14"/>
+    </Material>
+    <Material name="coronaMat_front" materialId="10" ambientColor="1 1 1" alphaBlending="true" customShaderId="16">
+      <Emissivemap fileId="15"/>
+    </Material>
+    <Material name="farmerHair_mat" materialId="11" ambientColor="1 1 1" cosPower="1.24573" specularColor="1 1 1">
+      <Texture fileId="11"/>
+      <Normalmap fileId="12"/>
+      <Glossmap fileId="13"/>
+    </Material>
+    <Material name="deutzF1M414_refl_mat" materialId="18" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1" customShaderId="18">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Reflectionmap fileId="17" wrap="false" type="cube" resolution="256" refractiveIndex="1" bumpScale="0.1" objectMask="2147483647"/>
+    </Material>
+    <Material name="phong1" materialId="15" diffuseColor="0.494118 0.494118 0.494118 1" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+    </Material>
+    <Material name="f1m414Light_mat" materialId="16" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+      <Emissivemap fileId="2"/>
+    </Material>
+    <Material name="farmer_mat" materialId="12" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="8"/>
+      <Normalmap fileId="9"/>
+      <Glossmap fileId="10"/>
+    </Material>
+    <Material name="f1m414Wheels_mat" materialId="13" ambientColor="1 1 1" cosPower="20" specularColor="1 1 1">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="f1m414Decal_mat" materialId="14" ambientColor="1 1 1" cosPower="20" specularColor="0.5 0.5 0.5">
+      <Texture fileId="19"/>
+      <Normalmap fileId="20"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="deutzF1m414.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape name="f1m414" dynamic="true" compound="true" collisionMask="2105410" density="0.38" clipDistance="300" nodeId="62" materialIds="15" shapeId="1" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <Shape name="steeringAxleRight" translation="-0.595809 0.379376 0.780143" nodeId="63" materialIds="7" shapeId="2" castsShadows="true" receiveShadows="true">
+        <Shape name="wheelRightFront" translation="-0.151707 -0.0225425 0.00916214" nodeId="64" materialIds="13" shapeId="3" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape name="steeringAxleLeft" translation="0.614451 0.379376 0.780143" nodeId="65" materialIds="7" shapeId="4" castsShadows="true" receiveShadows="true">
+        <Shape name="wheelLeftFront" translation="0.141643 -0.0225395 0.00916508" nodeId="66" materialIds="13" shapeId="5" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <Shape name="wheelRightBack" translation="-0.723917 0.553665 -0.913706" nodeId="67" materialIds="13" shapeId="6" castsShadows="true" receiveShadows="true"/>
+      <Shape name="wheelLeftBack" translation="0.714943 0.553665 -0.913706" nodeId="68" materialIds="13" shapeId="7" castsShadows="true" receiveShadows="true"/>
+      <TransformGroup name="cameras" nodeId="69">
+        <TransformGroup name="outdoorCameraTarget" translation="0 1.9 -0.608" rotation="-24 180 0" nodeId="70">
+          <Camera name="outdoorCamera" translation="0 0 9.567" nodeId="71" fov="54.4322" nearClip="0.3" farClip="5000"/>
+        </TransformGroup>
+        <Camera name="indoorCamera" translation="-1.42109e-016 2.16618 -0.829945" rotation="-8 180 0" nodeId="72" fov="54" nearClip="0.1" farClip="5000"/>
+        <Camera name="tipCamera" translation="4 5.035 4.69" rotation="-21 30.4 0" nodeId="73" fov="54.4322" nearClip="0.3" farClip="5000"/>
+      </TransformGroup>
+      <TransformGroup name="lights" nodeId="74">
+        <TransformGroup name="lights|frontLights" translation="0 1.32033 1.72898" nodeId="75">
+          <Light name="lizard422:frontLight" translation="-8.52651e-016 0.0465877 -0.828226" rotation="173 0 -180" nodeId="76" type="spot" diffuseColor="1 1 0.7" emitDiffuse="true" specularColor="1 1 0.7" emitSpecular="true" decayRate="1" range="50" coneAngle="90" dropOff="2"/>
+          <Shape name="lights|frontLights|frontLights" translation="0 -1.33451 -1.728" nodeId="77" materialIds="16" shapeId="8" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="backLights" translation="0 1.32033 -2.25372" nodeId="78"/>
+      </TransformGroup>
+      <TransformGroup name="size" translation="-2.87495 0 0" nodeId="79">
+        <TransformGroup name="startIndex" translation="1.14028 0 1.6755" nodeId="80"/>
+        <TransformGroup name="widthIndex" translation="-1.14 0 1.62001" nodeId="81"/>
+        <TransformGroup name="heightIndex" translation="1.14 0 -2.36625" nodeId="82"/>
+      </TransformGroup>
+      <TransformGroup name="exitPoint" translation="1.17683 0 0.11693" nodeId="83"/>
+      <TransformGroup name="steering" translation="0.00559021 1.21717 -0.244846" rotation="-13.7912 0 0" nodeId="84">
+        <Shape name="steeringWheel" nodeId="85" materialIds="7" shapeId="9" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <Shape name="farmer" translation="0.0383108 1.7087 -0.521834" nodeId="86" materialIds="12" shapeId="10" castsShadows="true" receiveShadows="true">
+        <Shape name="farmer_hair" translation="-0.0359846 -1.25776 -0.271201" visibility="false" nodeId="87" materialIds="11" shapeId="11" castsShadows="true" receiveShadows="true"/>
+        <Shape name="famer_hat" translation="-0.0344761 -1.25776 -0.287118" nodeId="88" materialIds="12" shapeId="12" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <TransformGroup name="upperTrailerAttacherJoint" translation="-1.42109e-016 0.759909 -1.18765" rotation="0 90 0" nodeId="89"/>
+      <Shape name="trafficCollisionTrigger" translation="0 1.804 1.2637" visibility="false" kinematic="true" trigger="true" collisionMask="1056768" nodeId="90" materialIds="15" shapeId="13" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <TransformGroup name="exhaustParticles" translation="0.185112 0.409417 -1.03451" nodeId="91"/>
+      <TransformGroup name="lightCones" visibility="false" nodeId="92">
+        <Shape name="lightCones_vis" nodeId="93" materialIds="8" shapeId="14" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <TransformGroup name="lightCoronas" nodeId="94">
+        <Shape name="coronaFront" translation="0.397242 1.18146 0.858268" nodeId="95" materialIds="10" shapeId="15"/>
+        <Shape name="coronaFront1" translation="-0.386597 1.18146 0.858329" nodeId="96" materialIds="10" shapeId="15"/>
+      </TransformGroup>
+      <TransformGroup name="cameraRaycastNode1" translation="0 1.32003 0.980941" nodeId="97"/>
+      <TransformGroup name="cameraRaycastNode2" translation="0 1.71967 -1.0536" nodeId="98"/>
+      <Shape name="f1m414_vis" translation="0 -0.0141847 0" nodeId="99" materialIds="18" shapeId="16" castsShadows="true" receiveShadows="true"/>
+      <Shape name="decals" translation="0 -0.0141847 0" nodeId="100" materialIds="14" shapeId="17" receiveShadows="true"/>
+      <Shape name="wheelLeftFront_col1" translation="0.567486 0.456447 0.787749" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.08" nodeId="101" materialIds="15" shapeId="18" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelLeftBack_col1" translation="0.556889 0.697942 -0.918398" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.08" nodeId="102" materialIds="15" shapeId="19" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelLeftFront_col" translation="-0.567046 0.45597 0.787749" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.08" nodeId="103" materialIds="15" shapeId="20" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape name="wheelLeftBack_col" translation="-0.557 0.696987 -0.918398" visibility="false" compoundChild="true" collisionMask="8450" staticFriction="0" dynamicFriction="0" density="0.08" nodeId="104" materialIds="15" shapeId="21" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="88">
+      <Attribute name="MaxHandle" type="integer" value="90"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

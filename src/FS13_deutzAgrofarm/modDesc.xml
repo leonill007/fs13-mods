@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="14">
+    <author>GIANTS Software</author>
+    <version>1.0.0.0</version>
+    <title>
+        <de>Deutz Agrofarm 430</de>
+    </title>
+    <description>
+        <de>Mit dem Agrofarm 430 bietet Ihnen Deutz einen Allrounder mit der Leistung und Wendigkeit, die Sie für Ihre Arbeiten brauchen.</de>
+    </description>
+
+    <iconFilename>store_deutzAgrofarm.dds</iconFilename>
+
+    <multiplayer supported="true" />
+
+    <storeItems>
+        <storeItem>
+            <de>
+                <name>Deutz Agrofarm 430</name>
+                <description>
+<![CDATA[Mit dem Agrofarm 430 bietet Ihnen Deutz einen Allrounder mit der Leistung und Wendigkeit, die Sie für Ihre Arbeiten brauchen.]]>
+                </description>
+                <specs><![CDATA[Max. Leistung: 80 kW / 110 PS
+Unterhaltskosten: %s / Tag]]></specs>
+            </de>
+            <rotation>0</rotation>
+            <image active="store_deutzAgrofarm.dds" brand="$data/vehicles/brand_deutz.png"/>
+            <price>80000</price>
+            <dailyUpkeep>40</dailyUpkeep>
+            <xmlFilename>deutzAgrofarm.xml</xmlFilename>
+            <brand>$l10n_shopItemBrand_deutz</brand>
+            <machineType>tractors</machineType>
+        </storeItem>
+    </storeItems>
+</modDesc>

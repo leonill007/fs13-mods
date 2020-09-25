@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="14">
+    <author>Venti, Giants Software</author>
+    <version>1.0.0.1</version>
+    <title>
+        <de>Radlader Paket</de>
+    </title>
+    <description>
+        <de>Die Radlader aus dem Demolition Company, Skiregion Simulator und dem Landwirtschafts-Simulator 2011</de>
+    </description>
+    <iconFilename>icon_wheelLoaderPack.png</iconFilename>
+    <multiplayer supported="true"/>
+    <storeItems>
+        <storeItem>
+            <de>
+                <name>Lizard Na-Cl Radlader</name>
+                <description>
+<![CDATA[Mit dem Radlader können Sie Silage oder Mist aufladen und in Kipper verfrachten. Das Fahrzeug kommt ebenfalls zum Einsatz, wenn Sie Silage in den Fahrsilos verdichten wollen.]]>
+                </description>
+				<specs>Leistung: 195 kW / 265 PS | Unterhaltskosten: %s / Tag</specs>
+            </de>
+            <rotation>0</rotation>
+            <image active="store_wheelLoaderSRS.dds" brand="$data/vehicles/brand_lizard.dds"/>
+            <price>124000</price>
+            <dailyUpkeep>290</dailyUpkeep>
+            <xmlFilename>wheelLoaderSRS.xml</xmlFilename>
+			<brand>Lizard</brand>
+			<machineType>frontLoaders</machineType>
+        </storeItem>
+		
+		
+        <storeItem>
+            <de>
+                <name>Lizard G 920 Radlader</name>
+                <description>
+<![CDATA[Der Radlader mit der Knicklenkung ermöglicht es Ihnen, Silage aus einem Fahrsilo in eine BGA zu befördern. Außerdem können Sie auch Silage oder Mist auf einen Anhänger verladen. Der schwere Radlader eignet sich auch ausgezeichnet um die Silage in den Fahrsilos zu verdichten.]]>
+                </description>
+				<specs>Max. Leistung: 190 kW / 259 PS - Ladevolumen: 10000 l</specs>
+            </de>
+            <rotation>0</rotation>
+            <image active="store_wheelLoaderLS11.dds" brand="$data/vehicles/brand_lizard.dds"/>
+            <price>120000</price>
+			<dailyUpkeep>285</dailyUpkeep>
+            <xmlFilename>wheelLoaderLS11.xml</xmlFilename>
+			<brand>Lizard</brand>
+			<machineType>frontLoaders</machineType>
+        </storeItem>
+		
+		
+		
+        <storeItem>
+            <de>
+                <name>Worker C 330 Radlader</name>
+                <description>
+<![CDATA[Der Radlader mit der Knicklenkung ermöglicht es Ihnen, Silage aus einem Fahrsilo in eine BGA zu befördern. Außerdem können Sie auch Silage oder Mist auf einen Anhänger verladen.
+Den Radlader können Sie auch benutzen, um die Silage in den Fahrsilos zu verdichten.]]>
+                </description>
+            </de>
+            <rotation>0</rotation>
+            <image active="store_wheelLoaderDC.dds" brand="textures/brand_worker.dds"/>
+            <price>80000</price>
+			<dailyUpkeep>180</dailyUpkeep>
+            <xmlFilename>wheelLoaderDC.xml</xmlFilename>
+			<brand>Worker</brand>
+			<machineType>frontLoaders</machineType>
+        </storeItem>
+    </storeItems>
+</modDesc>

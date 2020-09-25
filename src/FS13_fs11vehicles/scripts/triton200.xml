@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="sprayer">
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <de>Monsoon TRITON 200</de>
+    </name>
+	<typeDesc>$l10n_TypeDesc_Sprayer</typeDesc>
+    <filename>models/triton200.i3d</filename>
+
+    <size width="6.5" length="1.5" />
+
+    <cuttingAreas count="1">
+        <cuttingArea1 startIndex="0" widthIndex="1" heightIndex="2"/>
+    </cuttingAreas>
+
+    <attacherJoint index="3" jointType="implement" topReferenceNode="4"/>
+    <needsLowering value="false" />
+
+    <sprayUsages>
+        <sprayUsage fillType="fertilizer" litersPerSecond="1.33" />
+    </sprayUsages>
+
+    <fillTypes fillTypes="fertilizer"/>
+    <capacity>400</capacity>
+    <startFillLevel>0</startFillLevel>
+	<fillLitersPerSecond>40</fillLitersPerSecond>
+
+    <sprayParticleSystem file="$data/vehicles/particleSystems/sprayParticleSystem.i3d" />
+
+    <spraySound file="$data/vehicles/tools/sprayer.wav" pitchOffset="1" volume="1"/>
+
+    <sprayValves>
+        <sprayValve index="7" />
+        <sprayValve index="8" />
+        <sprayValve index="9" />
+        <sprayValve index="10" />
+        <sprayValve index="11" />
+        <sprayValve index="12" />
+        <sprayValve index="13" />
+        <sprayValve index="14" />
+        <sprayValve index="15" />
+    </sprayValves>
+    <components count="1">
+        <component1 centerOfMass="0 0.1 -0.1" solverIterationCount="4" />
+    </components>
+	
+    <schemaOverlay file="$data/vehicles/schemas/implementSchema.png" fileSelected="$data/vehicles/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+	
+</vehicle>

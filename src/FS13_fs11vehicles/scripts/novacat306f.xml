@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="mower">
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <en>Poettinger NOVACAT 306 F</en>
+        <de>Pöttinger NOVACAT 306 F</de>
+    </name>
+    <typeDesc>$l10n_TypeDesc_Mower</typeDesc>
+    <filename>models/novacat306f.i3d</filename>
+	
+	<size width="4.0" length="2.0" />
+	
+	<cuttingAreas count="1">
+        <cuttingArea1 startIndex="2" widthIndex="3" heightIndex="4"/>
+    </cuttingAreas>
+	
+    <isDefaultLowered value="false"/>
+    <needsLowering value="true" />
+    <allowsLowering value="false" />
+
+    <mowerSound file="sounds/mower.wav" pitchOffset="1" volume="0.5" />
+    
+    <attacherJoint index="0" jointType="implement" topReferenceNode="1" fixedRotation="true"/>
+    <components count="1">
+        <component1 centerOfMass="0 0 0" solverIterationCount="20" />
+    </components>
+	
+    <schemaOverlay file="$data/vehicles/schemas/implementSchema.png" fileSelected="$data/vehicles/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+	
+</vehicle>

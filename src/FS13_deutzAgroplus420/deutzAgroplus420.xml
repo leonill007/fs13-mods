@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="tractor_cylindered">
+	<annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <de>Deutz Agroplus 420</de>
+    </name>
+    <filename>deutzAgroplus420.i3d</filename>
+
+    <size width="3.4" length="5.5"/>
+
+    <wheels autoRotateBackSpeed="2">
+        <wheel rotSpeed="70" rotMax="30" rotMin="-30" driveMode="2" repr="0>0" driveNode="0>0|0" radius="0.64" deltaY="0.20" suspTravel="0.23" spring="40" damper="50" mass="0.165" longitudalStiffness="0.9" lateralStiffness="2" />
+        <wheel rotSpeed="70" rotMax="30" rotMin="-30" driveMode="2" repr="0>1" driveNode="0>1|0" radius="0.64" deltaY="0.20" suspTravel="0.23" spring="40" damper="50" mass="0.165" longitudalStiffness="0.9" lateralStiffness="2" />
+        <wheel rotSpeed="0" driveMode="1" repr="0>2" radius="0.78" deltaY="0.1" suspTravel="0.14" spring="80" damper="50" mass="0.2" longitudalStiffness="0.9" lateralStiffness="2" />
+        <wheel rotSpeed="0" driveMode="1" repr="0>3" radius="0.78" deltaY="0.1" suspTravel="0.14" spring="80" damper="50" mass="0.2" longitudalStiffness="0.9" lateralStiffness="2" />
+    </wheels>
+    <motor minRpm="100" maxRpm="700 1100 2050 545" maxTorques="-1 -1 -1 -1" brakeForce="5" lowBrakeForceScale="0.4" lowBrakeForceSpeedLimit="1" compensateWheelRadius="true" accelerations="1 1 1 1" forwardGearRatio="17.5" backwardGearRatio="17" differentialRatio="1">
+		<torque rpm="2050" torque="0.68"/>
+		<backwardTorque rpm="100" torque="1"/>
+		<backwardTorque rpm="600" torque="0.5"/>
+		<backwardTorque rpm="720" torque="0"/>
+    </motor>
+
+	<accelerationSpeed maxAcceleration="0.3" deceleration="0.6" backwardDeceleration="0.7" />
+    <fuelCapacity>160</fuelCapacity>
+    <fuelUsage>0.0016</fuelUsage>
+	<downForce>6</downForce>
+	<bunkerSiloCompacter compactingScale="2"/>
+
+    <cameras count="2">
+        <camera1 index="4|0" rotatable="true" rotateNode="4" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="4" transMax="35" >
+			<raycastNode index="0>6"/>
+			<raycastNode index="0>7"/>
+		</camera1>
+        <camera2 index="5" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" />
+    </cameras>
+
+    <lights>
+        <light realLight="0>9" fakeLight="0>27" decoration="0>28" lightType="0"/>
+        <light realLight="0>10" decoration="0>35" lightType="1"/>
+    </lights>
+
+	<brakeLights>
+		<brakeLight index="0>34" />
+	</brakeLights>
+
+	<beaconLights>
+		<beaconLight index="0>29|0" speed="0.016" />
+		<beaconLight index="0>29|1" speed="0.015" />
+	</beaconLights>
+
+    <steering index="0>23|0" rotationSpeed="6"/>
+    <enterReferenceNode index="0>"/>
+    <exitPoint index="0>8"/>
+
+    <trailerAttacherJoints>
+        <trailerAttacherJoint index="0>19" maxRotLimit="10 80 80" ptoOutputNode="0>20" ptoFilename="$data/vehicles/steerable/powerTakeoff.i3d"/>
+        <trailerAttacherJoint index="0>21" low="true" ptoOutputNode="0>20" ptoFilename="$data/vehicles/steerable/powerTakeoff.i3d"/>
+    </trailerAttacherJoints>
+
+    <attacherJoints>
+        <attacherJoint index="0>11|0|0" rotationNode="0>11" minRot="36 0 0" minRot2="-30 0 0" maxRot="2 0 0" rotationNode2="0>11|0" maxRot2="-2 0 0" maxTransLimit="0 0.5 0" maxRotLimit="0 0 20" moveTime="2.5" ptoOutputNode="0>20" ptoFilename="$data/vehicles/steerable/powerTakeoff.i3d">
+            <bottomArm rotationNode="0>12" translationNode="0>12|0" referenceNode="0>12|0|0" zScale="-1" />
+            <topArm baseNode="0>13" filename="$data/vehicles/steerable/upperLinkMedium.i3d" zScale="-1" />
+        </attacherJoint>
+        <attacherJoint index="0>16|0|0" rotationNode="0>16" minRot="-42 0 0" minRot2="32 0 0" maxRot="-8 0 0" minRotDistanceToGround="0.9" rotationNode2="16|0" maxRot2="8 0 0" maxTransLimit="0 0.4 0" maxRotLimit="0 0 20" moveTime="2.5" ptoOutputNode="0>22" ptoFilename="$data/vehicles/steerable/powerTakeoff.i3d">
+            <bottomArm rotationNode="0>17" translationNode="17|0" referenceNode="17|0|0" zScale="1" />
+            <topArm baseNode="0>18" filename="$data/vehicles/steerable/upperLinkSmall.i3d" zScale="1" />
+        </attacherJoint>
+    </attacherJoints>
+
+    <movingTools>
+		<!-- attacher joint back bottom-->
+        <movingTool index="0>12">
+            <!-- cylinder 1 -->
+            <dependentPart index="0>14" />
+            <!-- cylinder 2 -->
+            <dependentPart index="0>15" />
+			<!-- lowerLink -->
+            <dependentPart index="0>30" />
+        </movingTool>
+		
+		<!-- attacher joint front bottom-->
+        <movingTool index="0>17">
+            <dependentPart index="0>31" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+		<!-- attacher joint back bottom cylinder 1 -->
+        <movingPart index="0>14" referencePoint="0>15|1" referenceFrame="0>" invertZ="true">
+            <translatingPart index="0>14|0" />
+        </movingPart>
+
+        <!-- attacher joint back bottom cylinder 2 -->
+        <movingPart index="0>15" referencePoint="0>12|0|1" localReferencePoint="0>15|2" invertZ="true" referenceFrame="0>" >
+            <dependentPart index="0>15|2" />
+        </movingPart>
+        <!-- attacher joint back bottom cylinder 2b -->
+        <movingPart index="0>15|2" referencePoint="0>12|0|1" referenceFrame="0>15|3" invertZ="true">
+        </movingPart>        
+
+		<!-- attacher joint lower link-->
+        <movingPart index="0>30" referencePoint="0>12|0|2" referenceFrame="0>" invertZ="true" scaleZ="true">
+        </movingPart>
+		<!-- attacher joint front bottom cylinder -->
+		<movingPart index="0>31" referencePoint="0>17|0|1" referenceFrame="0>">
+            <dependentPart index="0>31|0" />
+        </movingPart>
+		<!-- steering -->
+		<movingPart index="0>32" referencePoint="0>0|1" referenceFrame="0>" isActiveDirty="true" playSound="false" scaleZ="true">
+        </movingPart>
+		<movingPart index="0>33" referencePoint="0>1|1" referenceFrame="0>" isActiveDirty="true" playSound="false" scaleZ="true">
+        </movingPart>
+    </movingParts>
+
+    <characterNode index="0>24" cameraMinDistance="1.5" />
+    <aiTrafficCollisionTrigger index="0>25" />
+	<exhaustParticleSystems count="1">
+        <exhaustParticleSystem1 node="0>26" file="$data/vehicles/particleSystems/exhaustParticleSystem.i3d" />
+    </exhaustParticleSystems>
+
+    <motorStartDuration>2500</motorStartDuration>
+	<attachSound file="$data/vehicles/steerable/deutz/attach.wav" pitchOffset="1" />
+    <motorStartSound file="$data/vehicles/steerable/same/sameExplorer3-105_start.wav" pitchOffset="0.9" volume="1" />
+    <motorSound file="$data/vehicles/steerable/same/sameExplorer3-105_idle.wav" pitchOffset="0.9" pitchScale="0.02" pitchMax="1.35" volume="1" radius="50" innerRadius="20" />
+    <motorSoundRun file="$data/vehicles/steerable/deutz/ttv_run.wav" pitchOffset="0.5" pitchScale="0.033" pitchMax="1.45" volume="1" />
+    <motorStopSound file="$data/vehicles/steerable/same/sameExplorer3-105_stop.wav" pitchOffset="0.92" volume="1" />
+    <compressedAirSound file="$data/vehicles/steerable/deutz/compressedAir.wav" pitchOffset="1" volume="1"/>
+    <compressionSound file="$data/vehicles/steerable/deutz/compressorWork.wav" pitchOffset="1" volume="1.5"/>
+
+	<honkSound file="$dataS2/sounds/horn.wav" volume="1" radius="80" innerRadius="35" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.05 0.2" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$data/vehicles/schemas/vehicleSchema.png" fileSelected="$data/vehicles/schemas/vehicleSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0.5 0">
+        <attacherJoint position="1 0" rotation="0" invertX="false" />
+        <attacherJoint position="0 0" rotation="0" invertX="true" />
+        <attacherJoint position="1 0" rotation="0" invertX="false" />
+        <attacherJoint position="1 0" rotation="0" invertX="false" />
+    </schemaOverlay>
+
+</vehicle>

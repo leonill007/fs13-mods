@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cultivator">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+    <name>
+        <de>Pöttinger SYNKRO 2600</de>
+    </name>
+    <description></description>
+	<typeDesc>$l10n_TypeDesc_Cultivator</typeDesc>
+    <filename>models/synkro2600.i3d</filename>
+
+    <size width="3.5" length="4.0" lengthOffset="2" />
+
+    <cuttingAreas count="1">
+        <cuttingArea1 startIndex="0" widthIndex="1" heightIndex="2"/>
+    </cuttingAreas>
+
+    <cultivatorSound file="$data/vehicles/tools/cultivatorSound.wav" pitchOffset="0.5" volume="0.6"/>
+
+    <attacherJoint index="3" jointType="implement" topReferenceNode="4"/>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="6" radius="0.45"/>
+        <speedRotatingPart index="7" radius="0.35"/>
+    </speedRotatingParts>
+
+    <groundParticleSystem position="0 0 -0.5" rotation="0 0 0" file="$data/vehicles/particleSystems/fieldWorkParticleSystem.i3d" />
+
+    <aiLeftMarker index="9" />
+    <aiRightMarker index="10" />
+    <aiBackMarker index="11" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0 -1.4" solverIterationCount="4" />
+    </components>
+	
+    <schemaOverlay file="$data/vehicles/schemas/implementSchema.png" fileSelected="$data/vehicles/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+	
+</vehicle>
